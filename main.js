@@ -1,13 +1,13 @@
-var playerContainer = document.querySelector('player__container');
+var playerContainer = document.querySelector('.player__container');
 var playBtn = document.querySelector('#play');
 var prevBtn = document.querySelector('#prev');
 var proxBtn = document.querySelector('#prox');
 
 var audio = document.querySelector('.audio');
-var progresso = document.querySelector('progresso');
-var progressoContainer = document.querySelector('progresso-container');
-var titulo = document.querySelector('titulo');
-var Artista = document.querySelector('artista');
+var progresso = document.querySelector('.progresso');
+var progressoContainer = document.querySelector('.progresso-container');
+var titulo = document.querySelector('.titulo');
+var Artista = document.querySelector('.artista');
 var album = document.querySelector('.track__imagem');
 
 // titulo das musicas 
@@ -23,11 +23,11 @@ loadMusica(musicas[musicaIndex]);
 function loadMusica(musica) {
     titulo.innerText = musica;
     Artista.innerText = musica;
-    audio.src = `music/${musica}.mp3`;
+    audio.src = `musicas/${musica}.mp3`;
     cover.src = `images/${musica}.jpg`;
   }
 
-  // toca a musica
+  // tocar a musica
   function musicaPlay() {
     musicaContainer.classList.add('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -36,3 +36,37 @@ function loadMusica(musica) {
     audio.play();
   }
   
+  // pausa a musica
+  function pauseMusica() {
+    musicaContainer.classList.remove('play');
+    playBtn.querySelector('i.fas').classList.add('fa-play');
+    playBtn.querySelector('i.fas').classList.remove('fa-pause');
+  
+    audio.pause();
+  }
+
+  // musica anterior
+  function prevMusica() {
+    musicaIndex--;
+  
+    if (musicaIndex < 0) {
+      musicaIndex = musicas.length - 1;
+    }
+  
+    loadMusica(musicas[musicaIndex]);
+  
+    musicaPlay();
+  }
+
+  // proxima musica
+  function proxMusica() {
+    musicaIndex++;
+  
+    if (musicaIndex > musicas.length - 1) {
+      musicaIndex = 0;
+    }
+  
+    loadMusica(musicas[musicaIndex]);
+  
+    musicaPlay();
+  }
