@@ -1,5 +1,32 @@
 header {
-  background-color: black;
+  background-color: transparent;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 2em;
+  height: 6em;
+  min-height: 3em;
+  justify-content: space-around;
+  align-items: center;
+}
+header button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  font-size: 1em;
+  padding: 0.5rem 0.8rem;
+  float: right;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 2em;
+}
+header button:hover, header button:focus {
+  outline: none;
+}
+header .logo {
+  margin-right: auto;
+  margin-left: 2em;
+  font-size: 2em;
+  color: #ceb78c;
 }

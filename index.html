@@ -5,14 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h2>ChillHoop</h2>
+        <h2 class="logo">ChillHoop</h2>
+        <button>Catalogo</button>
     </header>
     <div class="home__container">
         <h1>Musicas Sem Copyright</h1>
+    </div>
+    <div class="player__container">
+            <div class="track__imagem"></div>
+            <div class="track__nome">
+            <h2>Magic</h2>
+            <p>Coldplay</p>
+            </div>
+            <i class="fas fa-backward"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-forward"></i>
+                <div class="track__range">
+              <span class="musica-tempo">--:--</span>
+             <div class="progresso-container" id="progresso-container">
+             <div class="progresso" id="progresso"></div>
+           </div>
+             <span class="musica-length">--:--</span>
+             </div>
+               <audio src="./musicas/musica-1.mp3" id="audio"></audio>
     </div>
 </body>
 </html>

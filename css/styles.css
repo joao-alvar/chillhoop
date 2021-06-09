@@ -1,10 +1,42 @@
 header {
-  background-color: black;
+  background-color: transparent;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 2em;
+  height: 6em;
+  min-height: 3em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  font-size: 1em;
+  padding: 0.5rem 0.8rem;
+  float: right;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 2em;
+}
+header button:hover, header button:focus {
+  outline: none;
+}
+header .logo {
+  margin-right: auto;
+  margin-left: 2em;
+  font-size: 2em;
+  color: #ceb78c;
 }
 
-.Home__Container {
+.home__container {
   width: 100%;
   height: 41.09em;
   display: -webkit-box;
@@ -16,14 +48,92 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("../imagens/775121.gif");
+  background-image: url("../imagens/bg.gif");
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-h1 {
+.home__container h1 {
   color: #fff;
+}
+
+.player__container {
+  width: 100%;
+  padding: 1.4em 2em;
+  background: brown;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.player__container .track__imagem {
+  position: absolute;
+  left: 1em;
+  margin-right: 0;
+  width: 4em;
+  height: 4em;
+  background: #555;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url("../imagens/song-1.jpg");
+}
+
+.track__range {
+  position: absolute;
+  bottom: 0.2em;
+}
+
+.artista-container {
+  margin-right: auto;
+  padding: 0.2em;
+  width: auto;
+  background: #000;
+}
+.artista-container .artista-nome {
+  font-size: 1em;
+}
+
+.artista-musica {
+  margin-right: auto;
+  float: right;
+}
+
+.volume-slider {
+  position: absolute;
+  right: 2.4em;
+}
+
+.track__nome {
+  left: 5.4em;
+  position: absolute;
+}
+.track__nome h2, .track__nome p {
+  font-size: 1em;
+}
+
+.progresso-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progresso {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
 }
 
 * {
