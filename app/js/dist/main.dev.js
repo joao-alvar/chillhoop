@@ -1,53 +1,47 @@
+"use strict";
+
 var playerContainer = document.getElementById('musica-container');
 var playBtn = document.getElementById('play');
 var prevBtn = document.getElementById('prev');
 var proxBtn = document.getElementById('prox');
-
 var audio = document.querySelector('.audio');
 var progresso = document.getElementById('progresso');
 var progressoContainer = document.getElementById('progresso-container');
 var volume = document.getElementById('volumeslider');
 var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
-var album = document.getElementById('album__track');
+var album = document.getElementById('album__track'); // Titulo da Musica
 
-// Titulo da Musica
+var musicas = ['majed-salih', 'Joystock', 'OYStudio']; // Mantem o controle da musica
 
-const musicas = ['majed-salih', 'Joystock', 'OYStudio'];
+var musicaIndex = 2; // Carrega inicialmente os detalhes da música no DOM
 
-// Mantem o controle da musica
-let musicaIndex = 2;
+loadMusica(musicas[musicaIndex]); // Atualiza detalhes da musicas
 
-// Carrega inicialmente os detalhes da música no DOM
-loadMusica(musicas[musicaIndex]);
-
-// Atualiza detalhes da musicas
 function loadMusica(musica) {
   titulo.innerText = musica;
   Artista.innerText = musica;
-  audio.src = `./musicas/${musica}.mp3`;
-  album.src = `./imagens/${musica}.jpg`;
-}
+  audio.src = "./musicas/".concat(musica, ".mp3");
+  album.src = "./imagens/".concat(musica, ".jpg");
+} // Toca musicas
 
-// Toca musicas
+
 function musicaPlay() {
   playerContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
   playBtn.querySelector('i.fas').classList.add('fa-pause');
-
   audio.play();
-}
+} // Pausar musicas
 
-// Pausar musicas
+
 function pauseMusica() {
   playerContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.add('fa-play');
   playBtn.querySelector('i.fas').classList.remove('fa-pause');
-
   audio.pause();
-}
+} // Musica anterior
 
-// Musica anterior
+
 function prevMusica() {
   musicaIndex--;
 
@@ -56,11 +50,10 @@ function prevMusica() {
   }
 
   loadMusica(musicas[musicaIndex]);
-
   musicaPlay();
-}
+} // Proxima musica
 
-// Proxima musica
+
 function proxMusica() {
   musicaIndex++;
 
@@ -69,54 +62,48 @@ function proxMusica() {
   }
 
   loadMusica(musicas[musicaIndex]);
-
   musicaPlay();
-}
+} // atualiza barra de progresso
 
-// atualiza barra de progresso
+
 function updateProgresso(e) {
-  const { duration, currentTime } = e.srcElement;
-  const progressoPorcentagem = (currentTime / duration) * 100;
-  progresso.style.width = `${progressoPorcentagem}%`;
-}
+  var _e$srcElement = e.srcElement,
+      duration = _e$srcElement.duration,
+      currentTime = _e$srcElement.currentTime;
+  var progressoPorcentagem = currentTime / duration * 100;
+  progresso.style.width = "".concat(progressoPorcentagem, "%");
+} // definir barra de progresso
 
-// definir barra de progresso
+
 function setProgresso(e) {
-  const width = this.clientWidth;
-  const clickX = e.offsetX;
-  const duration = audio.duration;
+  var width = this.clientWidth;
+  var clickX = e.offsetX;
+  var duration = audio.duration;
+  audio.currentTime = clickX / width * duration;
+} // adicionar eventListener
 
-  audio.currentTime = (clickX / width) * duration;
-}
 
-// adicionar eventListener
-playBtn.addEventListener('click', () => {
-  const isPlaying = playerContainer.classList.contains('play');
+playBtn.addEventListener('click', function () {
+  var isPlaying = playerContainer.classList.contains('play');
 
   if (isPlaying) {
     pauseMusica();
   } else {
     musicaPlay();
   }
-});
+}); // Trocar musica
 
-// Trocar musica
 prevBtn.addEventListener('click', prevMusica);
-proxBtn.addEventListener('click', proxMusica);
+proxBtn.addEventListener('click', proxMusica); // Atualizar Time/musica 
 
-// Atualizar Time/musica 
-audio.addEventListener('timeupdate', updateProgresso);
+audio.addEventListener('timeupdate', updateProgresso); // Click na barra de progresso 
 
-// Click na barra de progresso 
-progressoContainer.addEventListener('click', setProgresso);
+progressoContainer.addEventListener('click', setProgresso); // Musica termina
 
-// Musica termina
 audio.addEventListener('ended', proxMusica);
-
 volumeslider = document.getElementById("volumeslider");
-
 volumeslider.addEventListener("mousemove", setvolume);
 
-function setvolume(){
+function setvolume() {
   audio.volume = volumeslider.value / 100;
 }

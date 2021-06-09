@@ -1,7 +1,7 @@
 .player__container {
     width: 100%;
     padding: 1.4em 2em;
-    background: brickred;
+    background: firebrick;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -10,7 +10,7 @@
     .track__imagem {
      position: absolute;
      left: 1em;
-     top: .8em;
+     top: .9em;
      width: 4em;
      height: 4em;
      object-fit: cover;
@@ -19,25 +19,58 @@
 }
 
     .artista__info {
-        left: 5.5em;
-        position: absolute;
-        width: auto;
-    #titulo, #artista {
-        font-size: 1em;
-    }
-    }
-
-    .volume-slider {
-        position: absolute;
-        right: 2.4em;
-    }
-
-    .track__nome {
         left: 5.4em;
         position: absolute;
-        h2, p {
-            font-size: 1em;
+        width: auto;
+        gap: 1em;
+    #titulo {
+        font-size: 1em;
+        color: #fff;
+    }
+    #artista {
+        font-size: .8em;
+        color: rgb(209, 193, 193);
+    }
+    }
+
+    .volume {
+        position: absolute;
+        top: 35%;
+        width: auto;
+        right: 1em;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5em;
+        input[type=range]{
+            -webkit-appearance: none;
+            border-radius: 3px;
+            }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 300px;
+            height: 5px;
+            background: #fe8daa;
+            border: none;
+            border-radius: 3px;
         }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: #fe8daa;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #fff;
+            margin-top: -5px;
+        }
+        
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:hover::-webkit-slider-runnable-track {
+    background: #ccc;
+}
     }
 
     .controles {

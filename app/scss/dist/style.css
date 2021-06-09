@@ -48,7 +48,7 @@ header .logo {
 .player__container {
   width: 100%;
   padding: 1.4em 2em;
-  background: #000;
+  background: firebrick;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -58,7 +58,7 @@ header .logo {
 .player__container .track__imagem {
   position: absolute;
   left: 1em;
-  top: 0.8em;
+  top: 0.9em;
   width: 4em;
   height: 4em;
   object-fit: cover;
@@ -66,25 +66,56 @@ header .logo {
 }
 
 .artista__info {
-  left: 5.5em;
-  position: absolute;
-  width: auto;
-}
-.artista__info #titulo, .artista__info #artista {
-  font-size: 1em;
-}
-
-.volume-slider {
-  position: absolute;
-  right: 2.4em;
-}
-
-.track__nome {
   left: 5.4em;
   position: absolute;
+  width: auto;
+  gap: 1em;
 }
-.track__nome h2, .track__nome p {
+.artista__info #titulo {
   font-size: 1em;
+  color: #fff;
+}
+.artista__info #artista {
+  font-size: 0.8em;
+  color: #d1c1c1;
+}
+
+.volume {
+  position: absolute;
+  top: 35%;
+  width: auto;
+  right: 1em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.volume input[type=range] {
+  -webkit-appearance: none;
+  border-radius: 3px;
+}
+.volume input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #fe8daa;
+  border: none;
+  border-radius: 3px;
+}
+.volume input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: #fe8daa;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -5px;
+}
+.volume input[type=range]:focus {
+  outline: none;
+}
+.volume input[type=range]:hover::-webkit-slider-runnable-track {
+  background: #ccc;
 }
 
 .controles {
