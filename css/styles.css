@@ -79,10 +79,9 @@ header .logo {
   top: 0.8em;
   width: 4em;
   height: 4em;
-  background: #555;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: url("../imagens/song-1.jpg");
+  background-image: url("../imagens/.jpg");
 }
 
 .artista__info {

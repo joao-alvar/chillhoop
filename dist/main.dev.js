@@ -21,7 +21,7 @@ function loadMusica(musica) {
   titulo.innerText = musica;
   Artista.innerText = musica;
   audio.src = "./musicas/".concat(musica, ".mp3");
-  album.src = "./images/".concat(musica, ".jpg");
+  album.src = "./imagens/".concat(musica, ".jpg");
 } // Toca musicas
 
 
