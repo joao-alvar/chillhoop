@@ -107,6 +107,29 @@ header .logo {
   font-size: 1em;
 }
 
+.controles {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+.controles button {
+  background-color: transparent;
+  outline: none;
+  width: auto;
+  border: none;
+  cursor: pointer;
+}
+.controles button .fas {
+  font-size: 1.5em;
+  color: #fff;
+}
+
 .progresso-container {
   background: #fff;
   border-radius: 5px;

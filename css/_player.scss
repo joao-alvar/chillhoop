@@ -41,6 +41,25 @@
         }
     }
 
+    .controles {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        button {
+            background-color: transparent;
+            outline: none;
+            width: auto;
+            border: none;
+            cursor: pointer;
+            .fas {
+                font-size: 1.5em;
+                color: #fff;
+            }
+        }
+    }
+
 .progresso-container {
   background: #fff;
   border-radius: 5px;
