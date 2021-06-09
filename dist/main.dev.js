@@ -1,8 +1,9 @@
+"use strict";
+
 var musicaContainer = document.getElementById('musica-container');
 var playBtn = document.getElementById('play');
 var prevBtn = document.getElementById('prev');
 var proxBtn = document.getElementById('prox');
-
 var audio = document.querySelector('.audio');
 var progresso = document.getElementById('progresso');
 var progressoContainer = document.getElementById('progresso-container');
