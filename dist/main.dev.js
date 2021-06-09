@@ -9,4 +9,10 @@ var progresso = document.getElementById('progresso');
 var progressoContainer = document.getElementById('progresso-container');
 var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
-var cover = document.getElementById('cover');
+var cover = document.getElementById('cover'); // titulo das musicas 
+
+var musicas = ['hey', 'summer', 'ukulele']; //mantem o controle das musicas
+
+var musicaIndex = 2; // carrega inicialmente detalhes das musicas no DOM
+
+loadMusica(musicas[musicaIndex]);
