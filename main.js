@@ -101,3 +101,12 @@ function loadMusica(musica) {
   //trocar musica
   prevBtn.addEventListener('click', prevMusica);
   proxBtn.addEventListener('click', proxMusica);
+
+  // tempo atualizar musica
+  audio.addEventListener('timeupdate', updateProgresso);
+
+  // cliquar na barra de progresso
+  progressoContainer.addEventListener('click', setProgresso);
+
+  // fim da musica
+  audio.addEventListener('ended', proxMusica);
