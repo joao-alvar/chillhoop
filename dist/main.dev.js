@@ -62,4 +62,35 @@ function proxMusica() {
 
   loadMusica(musicas[musicaIndex]);
   musicaPlay();
-}
+} // barra de progresso da musica
+
+
+function updateProgresso(e) {
+  var _e$srcElement = e.srcElement,
+      duration = _e$srcElement.duration,
+      currentTime = _e$srcElement.currentTime;
+  var progressoPorcentagem = currentTime / duration * 100;
+  progresso.style.width = "".concat(progressoPorcentagem, "%");
+} // definir barra de progresso
+
+
+function setProgresso(e) {
+  var width = this.clientWidth;
+  var clickX = e.offsetX;
+  var duration = audio.duration;
+  audio.currentTime = clickX / width * duration;
+} // adicionar eventListerner
+
+
+playBtn.addEventListener('click', function () {
+  var isPlaying = musicaContainer.classList.contains('play');
+
+  if (isPlaying) {
+    pauseMusica();
+  } else {
+    musicaPlay();
+  }
+}); //trocar musica
+
+prevBtn.addEventListener('click', prevMusica);
+proxBtn.addEventListener('click', proxMusica);

@@ -70,3 +70,34 @@ function loadMusica(musica) {
   
     musicaPlay();
   }
+
+  // barra de progresso da musica
+  function updateProgresso(e) {
+    const { duration, currentTime } = e.srcElement;
+    const progressoPorcentagem = (currentTime / duration) * 100;
+    progresso.style.width = `${progressoPorcentagem}%`;
+  }
+
+  // definir barra de progresso
+  function setProgresso(e) {
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+  
+    audio.currentTime = (clickX / width) * duration;
+  }
+  
+  // adicionar eventListerner
+  playBtn.addEventListener('click', () => {
+    const isPlaying = musicaContainer.classList.contains('play');
+  
+    if (isPlaying) {
+      pauseMusica();
+    } else {
+      musicaPlay();
+    }
+  });
+
+  //trocar musica
+  prevBtn.addEventListener('click', prevMusica);
+  proxBtn.addEventListener('click', proxMusica);
