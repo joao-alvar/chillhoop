@@ -8,34 +8,24 @@
     align-items: center;
     justify-content: center;
     .track__imagem {
-        position: absolute;
-        left: 1em;
-       margin-right: 0;
-       width: 4em;
-       height: 4em;
-       background: #555;
-       object-fit: cover;
-       background-image: url("../imagens/song-1.jpg");
+     position: absolute;
+     left: 1em;
+     top: .8em;
+     width: 4em;
+     height: 4em;
+     background: #555;
+     object-fit: cover;
+     background-image: url("../imagens/song-1.jpg");
        }
 }
 
-.track__range { 
-    position: absolute;
-    bottom: .2em; 
-    }
-
-    .artista-container {
-        margin-right: auto;
-        padding: .2em;
+    .artista__info {
+        left: 5.5em;
+        position: absolute;
         width: auto;
-        background: #000;
-    .artista-nome {
+    #titulo, #artista {
         font-size: 1em;
     }
-    }
-    .artista-musica {
-        margin-right: auto;
-        float: right;
     }
 
     .volume-slider {
@@ -58,6 +48,7 @@
   margin: 10px 0;
   height: 4px;
   width: 100%;
+  width: 30em;
 }
 
 .progresso {

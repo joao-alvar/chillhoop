@@ -1,44 +1,44 @@
 "use strict";
 
-var playerContainer = document.querySelector('.player__container');
-var playBtn = document.querySelector('#play');
-var prevBtn = document.querySelector('#prev');
-var proxBtn = document.querySelector('#prox');
+var playerContainer = document.getElementById('musica-container');
+var playBtn = document.getElementById('play');
+var prevBtn = document.getElementById('prev');
+var proxBtn = document.getElementById('prox');
 var audio = document.querySelector('.audio');
-var progresso = document.querySelector('.progresso');
-var progressoContainer = document.querySelector('.progresso-container');
-var titulo = document.querySelector('.titulo');
-var Artista = document.querySelector('.artista');
-var album = document.querySelector('.track__imagem'); // titulo das musicas 
+var progresso = document.getElementById('progresso');
+var progressoContainer = document.getElementById('progresso-container');
+var titulo = document.getElementById('titulo');
+var Artista = document.getElementById('artista');
+var album = document.getElementById('album__track'); // Titulo da Musica
 
-var musicas = ['hey', 'summer', 'ukulele']; //mantem o controle das musicas
+var musicas = ['majed-salih', 'Joystock', 'OYStudio']; // Mantem o controle da musica
 
-var musicaIndex = 2; // carrega inicialmente detalhes das musicas no DOM
+var musicaIndex = 2; // Carrega inicialmente os detalhes da música no DOM
 
-loadMusica(musicas[musicaIndex]); // atualiza detalhes das musicas
+loadMusica(musicas[musicaIndex]); // Atualiza detalhes da musicas
 
 function loadMusica(musica) {
   titulo.innerText = musica;
   Artista.innerText = musica;
-  audio.src = "musicas/".concat(musica, ".mp3");
-  cover.src = "images/".concat(musica, ".jpg");
-} // tocar a musica
+  audio.src = "./musicas/".concat(musica, ".mp3");
+  album.src = "./images/".concat(musica, ".jpg");
+} // Toca musicas
 
 
 function musicaPlay() {
-  musicaContainer.classList.add('play');
+  playerContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
   playBtn.querySelector('i.fas').classList.add('fa-pause');
   audio.play();
-} // pausa a musica
+} // Pausar musicas
 
 
 function pauseMusica() {
-  musicaContainer.classList.remove('play');
+  playerContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.add('fa-play');
   playBtn.querySelector('i.fas').classList.remove('fa-pause');
   audio.pause();
-} // musica anterior
+} // Musica anterior
 
 
 function prevMusica() {
@@ -50,7 +50,7 @@ function prevMusica() {
 
   loadMusica(musicas[musicaIndex]);
   musicaPlay();
-} // proxima musica
+} // Proxima musica
 
 
 function proxMusica() {
@@ -62,7 +62,7 @@ function proxMusica() {
 
   loadMusica(musicas[musicaIndex]);
   musicaPlay();
-} // barra de progresso da musica
+} // atualiza barra de progresso
 
 
 function updateProgresso(e) {
@@ -79,24 +79,24 @@ function setProgresso(e) {
   var clickX = e.offsetX;
   var duration = audio.duration;
   audio.currentTime = clickX / width * duration;
-} // adicionar eventListerner
+} // adicionar eventListener
 
 
 playBtn.addEventListener('click', function () {
-  var isPlaying = musicaContainer.classList.contains('play');
+  var isPlaying = playerContainer.classList.contains('play');
 
   if (isPlaying) {
     pauseMusica();
   } else {
     musicaPlay();
   }
-}); //trocar musica
+}); // Trocar musica
 
 prevBtn.addEventListener('click', prevMusica);
-proxBtn.addEventListener('click', proxMusica); // tempo atualizar musica
+proxBtn.addEventListener('click', proxMusica); // Atualizar Time/musica 
 
-audio.addEventListener('timeupdate', updateProgresso); // cliquar na barra de progresso
+audio.addEventListener('timeupdate', updateProgresso); // Click na barra de progresso 
 
-progressoContainer.addEventListener('click', setProgresso); // fim da musica
+progressoContainer.addEventListener('click', setProgresso); // Musica termina
 
 audio.addEventListener('ended', proxMusica);

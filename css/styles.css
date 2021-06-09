@@ -76,7 +76,7 @@ header .logo {
 .player__container .track__imagem {
   position: absolute;
   left: 1em;
-  margin-right: 0;
+  top: 0.8em;
   width: 4em;
   height: 4em;
   background: #555;
@@ -85,24 +85,13 @@ header .logo {
   background-image: url("../imagens/song-1.jpg");
 }
 
-.track__range {
+.artista__info {
+  left: 5.5em;
   position: absolute;
-  bottom: 0.2em;
-}
-
-.artista-container {
-  margin-right: auto;
-  padding: 0.2em;
   width: auto;
-  background: #000;
 }
-.artista-container .artista-nome {
+.artista__info #titulo, .artista__info #artista {
   font-size: 1em;
-}
-
-.artista-musica {
-  margin-right: auto;
-  float: right;
 }
 
 .volume-slider {
@@ -125,6 +114,7 @@ header .logo {
   margin: 10px 0;
   height: 4px;
   width: 100%;
+  width: 30em;
 }
 
 .progresso {

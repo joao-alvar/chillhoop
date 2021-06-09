@@ -20,22 +20,36 @@
         <h1>Musicas Sem Copyright</h1>
     </div>
     <div class="player__container">
-            <div class="track__imagem"></div>
-            <div class="track__nome">
-            <h2 class="titulo">Magic</h2>
-            <p class="track">Coldplay</p>
-            </div>
-            <i id="prev" class="fas fa-backward"></i>
-            <i id="play" class="fas fa-play"></i>
-            <i id="prox" class="fas fa-forward"></i>
-                <div class="track__range">
-              <span class="musica-tempo">--:--</span>
-             <div class="progresso-container">
-             <div class="progresso"></div>
-           </div>
-             <span class="musica-length">--:--</span>
-             </div>
-               <audio src="./musicas/hey.mp3" id="audio"></audio>
+    <div class="musica-container" id="musica-container">
+        <div class="track__imagem">
+            <img src="images/ukulele.jpg" alt="musica-cover" id="album__track" />
+          </div>
+          <div class="artista__info">
+        <h4 id="titulo"></h4>
+          <p id="artista"></p>
+          </div>
+        <div class="musica-info">
+          <div class="progresso-container" id="progresso-container">
+            <div class="progresso" id="progresso"></div>
+          </div>
+        </div>
+  
+        <audio src="./musicas/ukulele.mp3" class="audio"></audio>
+  
+       
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="prox" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+      </div>
+      </div>
     </div>
     <script src="main.js"></script>
 </body>
