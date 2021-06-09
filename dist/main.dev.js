@@ -15,4 +15,11 @@ var musicas = ['hey', 'summer', 'ukulele']; //mantem o controle das musicas
 
 var musicaIndex = 2; // carrega inicialmente detalhes das musicas no DOM
 
-loadMusica(musicas[musicaIndex]);
+loadMusica(musicas[musicaIndex]); // atualiza detalhes das musicas
+
+function loadMusica(musica) {
+  titulo.innerText = musica;
+  Artista.innerText = musica;
+  audio.src = "music/".concat(musica, ".mp3");
+  cover.src = "images/".concat(musica, ".jpg");
+}

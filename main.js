@@ -18,3 +18,11 @@ let musicaIndex = 2;
 
 // carrega inicialmente detalhes das musicas no DOM
 loadMusica(musicas[musicaIndex]);
+
+// atualiza detalhes das musicas
+function loadMusica(musica) {
+    titulo.innerText = musica;
+    Artista.innerText = musica;
+    audio.src = `music/${musica}.mp3`;
+    cover.src = `images/${musica}.jpg`;
+  }
