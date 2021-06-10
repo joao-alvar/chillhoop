@@ -1,0 +1,67 @@
+.realeses-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45.09em;
+    background-image: url(/imagens/realeses.png);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    div {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(7, 7, 7, 0.685);
+    }
+    .realeses__play {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        display: "";
+        top: 0;
+    }
+    .realeses__songs {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        display: "";
+        bottom: 0;
+        background-color: #f50f;
+    }
+    .wrap {
+    height: 17em;
+    width: 17em;
+    margin-right: auto;
+    margin-left: 15%;
+    background-color: transparent;
+    img {
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+    }
+    .wrap__container {
+        background-color: rgba(10, 10, 10, 0.473);
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 0;
+        padding: 10px;
+    }
+    .wrap__container > div {
+    text-align: left;
+    padding: 2px 0;
+  }
+    .col-md {
+        color: #fff;
+        background-color: #f8a;
+        height: 10em;
+        width: 40em;
+        text-align: left;
+
+    }
+}

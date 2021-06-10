@@ -14,7 +14,7 @@ var album = document.getElementById('album__track');
 
 // Titulo da Musica
 
-const musicas = ['majed-salih', 'Joystock', 'OYStudio'];
+const musicas = ['majed-salih', 'Joystock', 'Higher', 'OYStudio', 'chill-gaming'];
 
 // Mantem o controle da musica
 let musicaIndex = 2;

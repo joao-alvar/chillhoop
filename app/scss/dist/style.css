@@ -54,6 +54,7 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 .player__container .track__imagem {
   position: absolute;
@@ -161,6 +162,73 @@ header .logo {
   transition: width 0.1s linear;
 }
 
+.realeses-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45.09em;
+  background-image: url(/imagens/realeses.png);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.realeses-container div {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.685);
+}
+.realeses-container .realeses__play {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  display: "";
+  top: 0;
+}
+.realeses-container .realeses__songs {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  display: "";
+  bottom: 0;
+  background-color: #f50f;
+}
+.realeses-container .wrap {
+  height: 17em;
+  width: 17em;
+  margin-right: auto;
+  margin-left: 15%;
+  background-color: transparent;
+}
+.realeses-container .wrap img {
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+.realeses-container .wrap__container {
+  background-color: rgba(10, 10, 10, 0.473);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0;
+  padding: 10px;
+}
+.realeses-container .wrap__container > div {
+  text-align: left;
+  padding: 2px 0;
+}
+.realeses-container .col-md {
+  color: #fff;
+  background-color: #f8a;
+  height: 10em;
+  width: 40em;
+  text-align: left;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -169,4 +237,15 @@ header .logo {
 
 body {
   font-family: "Roboto", sans-serif;
+  min-width: 320px;
+  direction: ltr;
+  text-align: left;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body, html {
+  overflow-x: hidden;
+  line-height: 1.30769231;
 }
