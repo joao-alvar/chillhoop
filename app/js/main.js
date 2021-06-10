@@ -7,6 +7,7 @@ var audio = document.querySelector('.audio');
 var progresso = document.getElementById('progresso');
 var progressoContainer = document.getElementById('progresso-container');
 var volume = document.getElementById('volumeslider');
+var volumeConatiner = document.getElementById('volume');
 var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
 var album = document.getElementById('album__track');

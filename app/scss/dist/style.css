@@ -93,20 +93,26 @@ header .logo {
 }
 .volume input[type=range] {
   -webkit-appearance: none;
-  border-radius: 3px;
+  border-radius: 300px;
+  width: 90px;
+  background: #000;
+  color: #000;
+  cursor: default;
+  margin: 2px;
 }
 .volume input[type=range]::-webkit-slider-runnable-track {
-  width: 300px;
-  height: 5px;
+  width: 200px;
+  height: 3px;
   background: #fe8daa;
   border: none;
+  cursor: pointer;
   border-radius: 3px;
 }
 .volume input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: #fe8daa;
-  height: 16px;
-  width: 16px;
+  height: 13px;
+  width: 13px;
   border-radius: 50%;
   background: #fff;
   margin-top: -5px;
@@ -115,7 +121,7 @@ header .logo {
   outline: none;
 }
 .volume input[type=range]:hover::-webkit-slider-runnable-track {
-  background: #ccc;
+  background: #cccccc;
 }
 
 .controles {
