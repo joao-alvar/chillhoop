@@ -13,7 +13,7 @@ var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
 var album = document.getElementById('album__track'); // Titulo da Musica
 
-var musicas = ['majed-salih', 'Joystock', 'Higher', 'OYStudio', 'chill-gaming']; // Mantem o controle da musica
+var musicas = ['Simplexity', 'Bliss', 'Higher', 'Solstice', 'Toddle']; // Mantem o controle da musica
 
 var musicaIndex = 2; // Carrega inicialmente os detalhes da música no DOM
 
