@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 section {
   height: auto;
   width: 100%;
@@ -28,7 +29,9 @@ section .chill__bg__image__wrap {
   background-size: cover;
   object-fit: cover;
   z-index: 2;
-  background-image: url("/imagens/wrap-img/chill-bg.jpg");
+  background-image: url("/imagens/wrap-img/chill-bg-wrap.jpg");
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 section .col__md {
   padding: 10em;
@@ -41,7 +44,6 @@ section .col__md {
 }
 section .col__wrap {
   padding: 10em;
-  background-color: #f80;
   width: 50%;
   float: right;
   height: 100%;
@@ -57,22 +59,42 @@ section .top__list {
   z-index: 5;
   background-color: #FFDFBD;
 }
+section .top__list::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -6%;
+  right: -9%;
+  z-index: 3;
+  position: absolute;
+  background-color: #ffdfbd1f;
+}
+section .top__inner__list {
+  width: 83%;
+  height: 85%;
+  transform: translateY(8%);
+  margin: 0 auto;
+}
 section .top__artist {
-  background-color: #ccc;
   padding: 0.1em;
   display: flex;
   align-items: center;
+  padding: 0.5em;
+  text-transform: capitalize;
 }
 section .top__artist ul li {
   list-style: none;
-  color: #ffffff;
-  padding-left: 2em;
+  color: #460b0b;
+  padding-left: 1em;
+  font-family: "Open Sans", sans-serif;
 }
 section .top__artist a {
   text-decoration: none;
   color: #000000;
+  font-family: "Suez One", serif;
 }
 section .top__artist .fa-play-circle {
   color: #460b0b;
-  font-size: 2.2em;
+  font-size: 2.4em;
+  cursor: pointer;
 }
