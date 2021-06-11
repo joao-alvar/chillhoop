@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+$main-font: 'Suez One', serif;
+
+section {
+    height: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #460b0b;
+    z-index: 1;
+
+    .chillhoop {
+        height: 40em;
+        position: relative;
+    }
+
+    .chill__bg__image__wrap{
+        position: absolute;
+        top: 5%;
+        width: 23em;
+        height: 28em;
+        background-color: "";
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        background-image: url("/imagens/wrap-img/chill-bg.jpg");
+    }
+}
