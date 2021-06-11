@@ -390,18 +390,70 @@ section {
 }
 section .chillhoop {
   height: 40em;
+  width: 100%;
+}
+section .chilhoop-wrap {
   position: relative;
+  height: 100%;
 }
 section .chill__bg__image__wrap {
   position: absolute;
   top: 5%;
+  right: 20%;
   width: 23em;
   height: 28em;
   background-color: "";
   background-position: center;
   background-size: cover;
   object-fit: cover;
+  z-index: 2;
   background-image: url("/imagens/wrap-img/chill-bg.jpg");
+}
+section .col__md {
+  padding: 10em;
+  background-color: #f25;
+  width: 50%;
+  height: 100%;
+  float: left;
+  z-index: 1;
+  left: 0;
+}
+section .col__wrap {
+  padding: 10em;
+  background-color: #f80;
+  width: 50%;
+  float: right;
+  height: 100%;
+  right: auto;
+  z-index: 1;
+}
+section .top__list {
+  position: absolute;
+  width: 28%;
+  height: 32em;
+  top: 10%;
+  right: 8%;
+  z-index: 5;
+  background-color: #FFDFBD;
+}
+section .top__artist {
+  background-color: #ccc;
+  padding: 0.1em;
+  display: flex;
+  align-items: center;
+}
+section .top__artist ul li {
+  list-style: none;
+  color: #ffffff;
+  padding-left: 2em;
+}
+section .top__artist a {
+  text-decoration: none;
+  color: #000000;
+}
+section .top__artist .fa-play-circle {
+  color: #460b0b;
+  font-size: 2.2em;
 }
 
 * {
