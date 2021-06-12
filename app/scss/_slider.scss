@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&display=swap');
+$font-slider:  'Open Sans', sans-serif;
+
 .slider__section {
     height: auto;
     width: 100%;
 
     .slider__container {
         width: 100%;
-        height: 35em;
+        height: 32em;
     }
 }
 
@@ -80,7 +83,7 @@
 
 .slider__bg__1 {
   background-image: url('/imagens/wrap-img/slider-bg-1.png');
-
+  position: relative;
 }
 
 
@@ -92,3 +95,94 @@
 .slider__bg__3 {
   background-image: url('/imagens/wrap-img/slider-bg-3.jpg');
 }
+
+.slider__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.795);
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+
+    .span__content{
+    padding: 8em 4.1em 8em;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    }
+
+    p {
+      padding: 0 3em 0;
+      font-weight: 400;
+      font-size: 1.1em;
+      font-family: $font-slider;
+      color: #fff;
+      line-height: 1.5em;
+    }
+
+      h2 {
+        padding: 0 1em 0;
+        font-size: 1.8em;
+        font-weight: 800;
+        text-transform: capitalize;
+        font-family: $font-slider;
+        color: #fff;
+        line-height: 1.1em;
+      }
+
+      small {
+        color: #444;
+        font-size: .9em;
+        padding: .5em .2em .0em;
+      }
+
+      .content__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+        cursor: pointer;
+        padding-bottom: 1.5em;
+        padding-top: .2em;
+
+        &:hover {
+          color: #444;
+        }       
+      } 
+
+      a {
+        text-decoration: none;
+      }
+
+      .btn__slider {
+        background-color: transparent;
+        outline: none;       
+        padding: 10px 25px;
+        border-radius: 40px;
+        border: 1px solid #fff;
+        font-size: .8em;
+        cursor: pointer;
+        z-index: 1;
+        font-size: .81em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        transition: background 200ms, font-size 200ms;
+        
+      
+
+        &:hover {
+            background-color: #ccc;
+            color: #111;
+            border: 1px solid #ccc;
+        }
+      }
+    }
+  }
