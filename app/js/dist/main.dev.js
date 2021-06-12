@@ -108,3 +108,45 @@ volumeslider.addEventListener("mousemove", setvolume);
 function setvolume() {
   audio.volume = volumeslider.value / 100;
 }
+/* SLIDER SECTION */
+
+
+var slides = document.querySelectorAll('.slide__wrap div');
+var slideSayisi = slides.length;
+var prevSlider = document.querySelector('.sliderBtn__prev');
+var nextSlider = document.querySelector('.sliderBtn__next');
+
+for (var index = 0; index < slides.length; index++) {
+  var element = slides[index];
+  element.style.transform = "translateX(" + 100 * index + "%)";
+}
+
+var loop = 0 + 1000 * slideSayisi;
+
+function proximo() {
+  loop++;
+
+  for (var _index = 0; _index < slides.length; _index++) {
+    var _element = slides[_index];
+    _element.style.transform = "translateX(" + 100 * (_index - loop % slideSayisi) + "%)";
+  }
+}
+
+function anterior() {
+  loop--;
+
+  for (var _index2 = 0; _index2 < slides.length; _index2++) {
+    var _element2 = slides[_index2];
+    _element2.style.transform = "translateX(" + 100 * (_index2 - loop % slideSayisi) + "%)";
+  }
+}
+
+nextSlider.addEventListener('click', proximo);
+prevSlider.addEventListener('click', anterior);
+document.addEventListener('keydown', function (e) {
+  if (e.code === 'ArrowRight') {
+    proximo();
+  } else if (e.code === 'ArrowLeft') {
+    anterior();
+  }
+});

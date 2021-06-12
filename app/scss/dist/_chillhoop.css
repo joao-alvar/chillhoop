@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
-section {
+.chillhoop__setion {
   height: auto;
   width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #460b0b;
   z-index: 1;
 }
-section .chillhoop {
+.chillhoop__setion .chillhoop {
   height: 40em;
   width: 100%;
 }
-section .chilhoop-wrap {
+.chillhoop__setion .chilhoop-wrap {
   position: relative;
   height: 100%;
 }
-section .chill__bg__image__wrap {
+.chillhoop__setion .chill__bg__image__wrap {
   position: absolute;
   top: 5%;
   right: 17%;
@@ -33,7 +32,7 @@ section .chill__bg__image__wrap {
   filter: grayscale(100%);
   opacity: 0.5;
 }
-section .col__md {
+.chillhoop__setion .col__md {
   padding: 10em;
   width: 50%;
   height: 100%;
@@ -45,28 +44,28 @@ section .col__md {
   justify-content: center;
   position: relative;
 }
-section .col__md .md__wrap {
+.chillhoop__setion .col__md .md__wrap {
   position: absolute;
   top: 10%;
   bottom: 5%;
   left: 18%;
   right: 8%;
 }
-section .col__md .inner__md-wrap {
+.chillhoop__setion .col__md .inner__md-wrap {
   width: 100%;
   height: 100%;
 }
-section .col__md .md__title {
+.chillhoop__setion .col__md .md__title {
   padding: 0.1em 2em 0.2em;
   width: 100%;
 }
-section .col__md .md__title h2 {
+.chillhoop__setion .col__md .md__title h2 {
   color: #FFDFBD;
   font-size: 2.6em;
   font-family: "Suez One", serif;
   font-weight: 400;
 }
-section .col__md .md__p {
+.chillhoop__setion .col__md .md__p {
   padding: 1em 8.5em 0.2em;
   text-align: left;
   color: #fff;
@@ -74,19 +73,19 @@ section .col__md .md__p {
   font-size: 0.945em;
   line-height: 1.8em;
 }
-section .col__md .md__p span {
+.chillhoop__setion .col__md .md__p span {
   color: #FFDFBD;
   font-family: "Suez One", serif;
   font-weight: 300;
 }
-section .col__md .md__p .primary__p {
+.chillhoop__setion .col__md .md__p .primary__p {
   padding: 0.1em 2em 0.2em;
   white-space: pre-line;
 }
-section .col__md .md__p .secondary__p {
+.chillhoop__setion .col__md .md__p .secondary__p {
   padding: 2em 2em 0.2em;
 }
-section .col__md .btn__md {
+.chillhoop__setion .col__md .btn__md {
   width: 100%;
   padding: 1.8em 1em 0.2em;
   display: flex;
@@ -94,23 +93,23 @@ section .col__md .btn__md {
   justify-content: center;
   margin-left: -3em;
 }
-section .col__md .btn__md button {
+.chillhoop__setion .col__md .btn__md button {
   padding: 1.2em 3.2em;
   background-color: #FFDFBD;
   outline: none;
   border: #FFDFBD;
 }
-section .col__md .btn__md button:hover {
+.chillhoop__setion .col__md .btn__md button:hover {
   background-color: #e6cbaf;
 }
-section .col__md a {
+.chillhoop__setion .col__md a {
   color: #360202;
   font-size: 2em;
   font-family: "Suez One", serif;
   font-weight: 300;
   text-transform: uppercase;
 }
-section .col__md a::before {
+.chillhoop__setion .col__md a::before {
   content: "";
   padding: 1.3em 5.2em;
   bottom: 13%;
@@ -118,7 +117,7 @@ section .col__md a::before {
   position: absolute;
   background-color: #ffdfbd1f;
 }
-section .col__wrap {
+.chillhoop__setion .col__wrap {
   padding: 10em;
   width: 50%;
   float: right;
@@ -126,7 +125,7 @@ section .col__wrap {
   right: auto;
   z-index: 1;
 }
-section .top__list {
+.chillhoop__setion .top__list {
   position: absolute;
   width: 28%;
   height: 32em;
@@ -135,7 +134,7 @@ section .top__list {
   z-index: 5;
   background-color: #FFDFBD;
 }
-section .top__list::before {
+.chillhoop__setion .top__list::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -144,31 +143,31 @@ section .top__list::before {
   position: absolute;
   background-color: #ffdfbd1f;
 }
-section .top__inner__list {
+.chillhoop__setion .top__inner__list {
   width: 83%;
   height: 85%;
   transform: translateY(8%);
   margin: 0 auto;
 }
-section .top__artist {
+.chillhoop__setion .top__artist {
   padding: 0.1em;
   display: flex;
   align-items: center;
   padding: 0.5em;
   text-transform: capitalize;
 }
-section .top__artist ul li {
+.chillhoop__setion .top__artist ul li {
   list-style: none;
   color: #460b0b;
   padding-left: 1em;
   font-family: "Open Sans", sans-serif;
 }
-section .top__artist a {
+.chillhoop__setion .top__artist a {
   text-decoration: none;
   color: #000000;
   font-family: "Suez One", serif;
 }
-section .top__artist .fa-play-circle {
+.chillhoop__setion .top__artist .fa-play-circle {
   color: #360202;
   font-size: 2.4em;
   cursor: pointer;
