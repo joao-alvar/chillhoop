@@ -81,8 +81,9 @@ section {
             padding: 1em 8.5em .2em;
             text-align: left;
             color: #fff;
-            margin-left: -6em;
-            font-size: .9em;
+            margin-left: -7em;
+            font-size: .945em;
+            line-height: 1.8em;
 
             span {
                 color: #FFDFBD;
@@ -91,14 +92,12 @@ section {
             }
 
             .primary__p {
-                padding:  .1em 1em .2em;
+                padding:  .1em 2em .2em;
                 white-space: pre-line;
             }
 
             .secondary__p {
-                padding:  2em 1em .2em;
-                white-space: pre-line;
-
+                padding:  2em 2em .2em;
             }
             
         }
@@ -111,18 +110,31 @@ section {
             margin-left: -3em;
 
             button {
-                padding: 1em 3.2em;
+                padding: 1.2em 3.2em;
                 background-color: #FFDFBD;
                 outline: none;
                 border: #FFDFBD;
+                &:hover {
+                background-color: #e6cbaf;
+                }
+                    
+                }
             }
 
             a {
-                color: #460b0b;
+                color: #360202;
                 font-size: 2em;
                 font-family: $main-font;
                 font-weight: 300;
                 text-transform: uppercase;
+              
+                &::before {
+                    content: "";
+                    padding: 1.3em 5.2em;
+                    bottom: 13%;
+                    left: 7%;
+                    position: absolute;
+                    background-color: #ffdfbd1f;
             }
         }
     }
@@ -151,7 +163,6 @@ section {
             height: 100%;
             top: -6%;
             right: -9%;
-            z-index: 3;
             position: absolute;
             background-color: #ffdfbd1f;
 

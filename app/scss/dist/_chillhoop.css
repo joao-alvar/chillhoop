@@ -70,8 +70,9 @@ section .col__md .md__p {
   padding: 1em 8.5em 0.2em;
   text-align: left;
   color: #fff;
-  margin-left: -6em;
-  font-size: 0.9em;
+  margin-left: -7em;
+  font-size: 0.945em;
+  line-height: 1.8em;
 }
 section .col__md .md__p span {
   color: #FFDFBD;
@@ -79,12 +80,11 @@ section .col__md .md__p span {
   font-weight: 300;
 }
 section .col__md .md__p .primary__p {
-  padding: 0.1em 1em 0.2em;
+  padding: 0.1em 2em 0.2em;
   white-space: pre-line;
 }
 section .col__md .md__p .secondary__p {
-  padding: 2em 1em 0.2em;
-  white-space: pre-line;
+  padding: 2em 2em 0.2em;
 }
 section .col__md .btn__md {
   width: 100%;
@@ -95,17 +95,28 @@ section .col__md .btn__md {
   margin-left: -3em;
 }
 section .col__md .btn__md button {
-  padding: 1em 3.2em;
+  padding: 1.2em 3.2em;
   background-color: #FFDFBD;
   outline: none;
   border: #FFDFBD;
 }
-section .col__md .btn__md a {
-  color: #460b0b;
+section .col__md .btn__md button:hover {
+  background-color: #e6cbaf;
+}
+section .col__md a {
+  color: #360202;
   font-size: 2em;
   font-family: "Suez One", serif;
   font-weight: 300;
   text-transform: uppercase;
+}
+section .col__md a::before {
+  content: "";
+  padding: 1.3em 5.2em;
+  bottom: 13%;
+  left: 7%;
+  position: absolute;
+  background-color: #ffdfbd1f;
 }
 section .col__wrap {
   padding: 10em;
@@ -130,7 +141,6 @@ section .top__list::before {
   height: 100%;
   top: -6%;
   right: -9%;
-  z-index: 3;
   position: absolute;
   background-color: #ffdfbd1f;
 }
