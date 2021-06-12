@@ -27,7 +27,7 @@ section {
     .chill__bg__image__wrap{
         position: absolute;
         top: 5%;
-        right: 20%;
+        right: 17%;
         width: 23em;
         height: 28em;
         background-color: "";
@@ -42,12 +42,89 @@ section {
 
     .col__md {
         padding: 10em;
-        background-color: #f25;
         width: 50%;
         height: 100%;
         float: left;
         z-index: 1;
-        left: 0;
+        left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .md__wrap {
+            position: absolute;
+            top: 10%;
+            bottom: 5%;
+            left: 18%;
+            right: 8%;
+        }
+
+        .inner__md-wrap{
+            width: 100%;
+            height: 100%;
+        }
+
+        .md__title {
+            padding: .1em 2em .2em;
+            width: 100%;
+            
+            h2 {
+            color: #FFDFBD;
+            font-size: 2.6em;
+            font-family: $main-font;
+            font-weight: 400;
+            }
+        }
+        
+        .md__p {
+            padding: 1em 8.5em .2em;
+            text-align: left;
+            color: #fff;
+            margin-left: -6em;
+            font-size: .9em;
+
+            span {
+                color: #FFDFBD;
+                font-family: $main-font;
+                font-weight: 300;
+            }
+
+            .primary__p {
+                padding:  .1em 1em .2em;
+                white-space: pre-line;
+            }
+
+            .secondary__p {
+                padding:  2em 1em .2em;
+                white-space: pre-line;
+
+            }
+            
+        }
+        .btn__md {
+            width: 100%;
+            padding:  1.8em 1em .2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -3em;
+
+            button {
+                padding: 1em 3.2em;
+                background-color: #FFDFBD;
+                outline: none;
+                border: #FFDFBD;
+            }
+
+            a {
+                color: #460b0b;
+                font-size: 2em;
+                font-family: $main-font;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+        }
     }
 
     .col__wrap {
@@ -109,7 +186,7 @@ section {
         }
 
         .fa-play-circle {
-            color: #460b0b;
+            color: #360202;
             font-size: 2.4em;
             cursor: pointer;
         }

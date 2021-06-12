@@ -400,7 +400,7 @@ section .chilhoop-wrap {
 section .chill__bg__image__wrap {
   position: absolute;
   top: 5%;
-  right: 20%;
+  right: 17%;
   width: 23em;
   height: 28em;
   background-color: "";
@@ -414,12 +414,77 @@ section .chill__bg__image__wrap {
 }
 section .col__md {
   padding: 10em;
-  background-color: #f25;
   width: 50%;
   height: 100%;
   float: left;
   z-index: 1;
-  left: 0;
+  left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+section .col__md .md__wrap {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 18%;
+  right: 8%;
+}
+section .col__md .inner__md-wrap {
+  width: 100%;
+  height: 100%;
+}
+section .col__md .md__title {
+  padding: 0.1em 2em 0.2em;
+  width: 100%;
+}
+section .col__md .md__title h2 {
+  color: #FFDFBD;
+  font-size: 2.6em;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+}
+section .col__md .md__p {
+  padding: 1em 8.5em 0.2em;
+  text-align: left;
+  color: #fff;
+  margin-left: -6em;
+  font-size: 0.9em;
+}
+section .col__md .md__p span {
+  color: #FFDFBD;
+  font-family: "Suez One", serif;
+  font-weight: 300;
+}
+section .col__md .md__p .primary__p {
+  padding: 0.1em 1em 0.2em;
+  white-space: pre-line;
+}
+section .col__md .md__p .secondary__p {
+  padding: 2em 1em 0.2em;
+  white-space: pre-line;
+}
+section .col__md .btn__md {
+  width: 100%;
+  padding: 1.8em 1em 0.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -3em;
+}
+section .col__md .btn__md button {
+  padding: 1em 3.2em;
+  background-color: #FFDFBD;
+  outline: none;
+  border: #FFDFBD;
+}
+section .col__md .btn__md a {
+  color: #460b0b;
+  font-size: 2em;
+  font-family: "Suez One", serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 section .col__wrap {
   padding: 10em;
@@ -473,7 +538,7 @@ section .top__artist a {
   font-family: "Suez One", serif;
 }
 section .top__artist .fa-play-circle {
-  color: #460b0b;
+  color: #360202;
   font-size: 2.4em;
   cursor: pointer;
 }
