@@ -166,3 +166,93 @@ document.addEventListener('keydown',function(e){
     }
 });
 
+
+/* PLAYER TOGGLE */
+
+function toggleMenu(){
+  const menuToggle = document.querySelector('#toggle');
+  const navigation = document.querySelector('.player__container');
+  navigation.classList.toggle('active');
+};
+
+// ADICIONAR INTERSECTION OBSERVER API PARA MUDAR A COR DA NAVBAR DEPENDENDO DA POSIÇÃO DO VIEWPORT.
+
+const header = document.querySelector("header");
+const sectionOne = document.querySelector(".column");
+
+const sectionOneOptions = {
+  threShold: 0,
+  rootMargin: "-0px 0px 0px 0px"
+};
+
+sectionOneObserver = new IntersectionObserver(function(
+  entries,
+  sectionOneObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      header.classList.remove("nav__scroll");
+    } else {
+      header.classList.add("nav__scroll");
+    }
+  });
+},
+sectionOneOptions);
+
+sectionOneObserver.observe(sectionOne);
+
+
+
+
+const navbar = document.querySelector("header");
+const sectionTwo = document.querySelector(".btn__md");
+
+const sectionTwoOptions = {
+  threShold: 1,
+  rootMargin: "-0px 0px 0px 0px"
+};
+
+sectionTwoObserver = new IntersectionObserver(function(
+  entries,
+  sectionTwoObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      navbar.classList.remove("nav__chill");
+    } else {
+      navbar.classList.add("nav__chill");
+    }
+  });
+},
+sectionTwoOptions);
+
+sectionTwoObserver.observe(sectionTwo);
+
+
+
+
+const navScroll = document.querySelector("header");
+const sectionTree = document.querySelector(".nav__footer");
+
+const sectionTreeOptions = {
+  threShold: 1,
+  rootMargin: "-0px 0px 0px 0px"
+};
+
+sectionTreeObserver = new IntersectionObserver(function(
+  entries,
+  sectionTreeObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      navScroll.classList.remove("nav__scroll__change");
+    } else {
+      navScroll.classList.add("nav__scroll__change");
+    }
+  });
+},
+sectionTreeOptions);
+
+sectionTreeObserver.observe(sectionTree);
+
+

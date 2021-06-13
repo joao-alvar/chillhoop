@@ -1,14 +1,16 @@
 .player__container {
   width: 100%;
   padding: 1.4em 2em;
+  bottom: -300px;
   background: firebrick;
   position: fixed;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;
-  display: none;
+}
+.player__container.active {
+  bottom: 0;
 }
 .player__container .track__imagem {
   position: absolute;
@@ -114,4 +116,14 @@
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
+}
+
+.fa-chevron-down {
+  color: #fe8daa;
+  position: fixed;
+  z-index: 1000;
+  margin-left: auto;
+  right: 1em;
+  bottom: 0.91em;
+  cursor: pointer;
 }

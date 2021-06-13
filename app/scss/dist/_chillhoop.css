@@ -98,6 +98,7 @@
   background-color: #FFDFBD;
   outline: none;
   border: #FFDFBD;
+  cursor: pointer;
   box-shadow: -15px 15px 0px rgba(255, 223, 189, 0.1);
 }
 .chillhoop__setion .col__md .btn__md button:hover {

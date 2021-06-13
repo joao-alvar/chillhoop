@@ -150,3 +150,61 @@ document.addEventListener('keydown', function (e) {
     anterior();
   }
 });
+/* PLAYER TOGGLE */
+
+function toggleMenu() {
+  var menuToggle = document.querySelector('#toggle');
+  var navigation = document.querySelector('.player__container');
+  navigation.classList.toggle('active');
+}
+
+; // ADICIONAR INTERSECTION OBSERVER API PARA MUDAR A COR DA NAVBAR DEPENDENDO DA POSIÇÃO DO VIEWPORT.
+
+var header = document.querySelector("header");
+var sectionOne = document.querySelector(".column");
+var sectionOneOptions = {
+  threShold: 0,
+  rootMargin: "-0px 0px 0px 0px"
+};
+sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      header.classList.remove("nav__scroll");
+    } else {
+      header.classList.add("nav__scroll");
+    }
+  });
+}, sectionOneOptions);
+sectionOneObserver.observe(sectionOne);
+var navbar = document.querySelector("header");
+var sectionTwo = document.querySelector(".btn__md");
+var sectionTwoOptions = {
+  threShold: 1,
+  rootMargin: "-0px 0px 0px 0px"
+};
+sectionTwoObserver = new IntersectionObserver(function (entries, sectionTwoObserver) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      navbar.classList.remove("nav__chill");
+    } else {
+      navbar.classList.add("nav__chill");
+    }
+  });
+}, sectionTwoOptions);
+sectionTwoObserver.observe(sectionTwo);
+var navScroll = document.querySelector("header");
+var sectionTree = document.querySelector(".nav__footer");
+var sectionTreeOptions = {
+  threShold: 1,
+  rootMargin: "-0px 0px 0px 0px"
+};
+sectionTreeObserver = new IntersectionObserver(function (entries, sectionTreeObserver) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      navScroll.classList.remove("nav__scroll__change");
+    } else {
+      navScroll.classList.add("nav__scroll__change");
+    }
+  });
+}, sectionTreeOptions);
+sectionTreeObserver.observe(sectionTree);

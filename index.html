@@ -31,7 +31,7 @@
           It’s free to download and easy to use. This is Chillhop Music for creators.
         </p>
         <div class="home__btn">
-          <a class="btn btn__right" href="#"> Take a Tour </a>
+          <a class="btn btn__right" href="#realeses"> Take a Tour </a>
           <a class="btn btn__left" href="#"> Sign up </a>
         </div>
     </div>
@@ -39,7 +39,7 @@
     </section>
 
     <!-- REALESES SECTION COMEÇA -->
-    <section class="realeses-container">
+    <section class="realeses-container" id="realeses">
     <div class="glass-div">
       <div class="realeses__play">
         <div class="wrap__container">
@@ -306,7 +306,8 @@
   </footer>
 
   <!-- PLAYER SECTION COMEÇA -->
-  <div class="player__container">
+  <span class="menu__player"><i id="toggle" class="fas fa-chevron-down" onclick="toggleMenu();"></i></span>
+  <div id="player" class="player__container">
     <div class="musica-container" id="musica-container">
         <div class="track__imagem">
             <img src="imagens/.jpg" alt="musica-cover" id="album__track" />
