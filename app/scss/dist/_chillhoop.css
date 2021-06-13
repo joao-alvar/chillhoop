@@ -172,3 +172,6 @@
   font-size: 2.4em;
   cursor: pointer;
 }
+.chillhoop__setion .top__artist .fa-play-circle:hover {
+  color: #472727;
+}

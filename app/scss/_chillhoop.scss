@@ -199,6 +199,10 @@ $main-font: 'Suez One', serif;
             color: #360202;
             font-size: 2.4em;
             cursor: pointer;
+
+            &:hover {
+            color: #472727;
+            }
         }
     }
 }

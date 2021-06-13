@@ -552,6 +552,9 @@ header .logo {
   font-size: 2.4em;
   cursor: pointer;
 }
+.chillhoop__setion .top__artist .fa-play-circle:hover {
+  color: #472727;
+}
 
 .slider__section {
   height: auto;
@@ -718,6 +721,79 @@ header .logo {
   background-color: #ccc;
   color: #111;
   border: 1px solid #ccc;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2D2D2D;
+}
+footer .nav__footer {
+  width: 100%;
+}
+footer nav {
+  display: flex;
+  padding: 2em;
+  padding-bottom: 0.5em;
+}
+footer nav ul {
+  list-style: none;
+  text-indent: 1em;
+}
+footer nav a {
+  text-decoration: none;
+  color: #fff;
+}
+footer nav .nav__links {
+  margin-right: auto;
+  display: flex;
+}
+footer nav .nav__links li {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 0.81em;
+}
+footer nav .nav__links li a:hover {
+  color: #afa9a9;
+}
+footer nav .social__links {
+  margin-left: auto;
+}
+footer nav .social__links li {
+  display: inline;
+}
+footer nav .social__links .fab {
+  font-size: 1.2em;
+}
+footer nav .social__links .fab:hover {
+  color: #afa9a9;
+}
+
+.all__rights {
+  width: 100%;
+  background-color: #f20;
+  display: flex;
+}
+.all__rights ul {
+  margin-right: auto;
+  text-indent: 1.5em;
+}
+.all__rights li {
+  display: inline;
+}
+.all__rights a {
+  text-decoration: none;
+  color: #fff;
+  gap: 2em;
+}
+.all__rights .rights__text {
+  float: right;
+  margin-right: 1.8em;
+  color: #fff;
 }
 
 * {
