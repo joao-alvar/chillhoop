@@ -178,11 +178,11 @@ function toggleMenu(){
 // ADICIONAR INTERSECTION OBSERVER API PARA MUDAR A COR DA NAVBAR DEPENDENDO DA POSIÇÃO DO VIEWPORT.
 
 const header = document.querySelector("header");
-const sectionOne = document.querySelector(".column");
+const sectionOne = document.querySelector(".realeses__songs");
 
 const sectionOneOptions = {
   threShold: 0,
-  rootMargin: "-0px 0px 0px 0px"
+  rootMargin: "0px 0px -230px 0px"
 };
 
 sectionOneObserver = new IntersectionObserver(function(
@@ -205,11 +205,11 @@ sectionOneObserver.observe(sectionOne);
 
 
 const navbar = document.querySelector("header");
-const sectionTwo = document.querySelector(".btn__md");
+const sectionTwo = document.querySelector(".chillhoop__setion");
 
 const sectionTwoOptions = {
-  threShold: 1,
-  rootMargin: "-0px 0px 0px 0px"
+  threShold: 0,
+  rootMargin: "0px 0px -590px 0px"
 };
 
 sectionTwoObserver = new IntersectionObserver(function(
@@ -232,11 +232,11 @@ sectionTwoObserver.observe(sectionTwo);
 
 
 const navScroll = document.querySelector("header");
-const sectionTree = document.querySelector(".nav__footer");
+const sectionTree = document.querySelector(".all__rights");
 
 const sectionTreeOptions = {
   threShold: 1,
-  rootMargin: "-0px 0px 0px 0px"
+  rootMargin: "0px 0px -20px 0px"
 };
 
 sectionTreeObserver = new IntersectionObserver(function(

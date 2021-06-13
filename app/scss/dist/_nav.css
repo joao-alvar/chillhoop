@@ -1,11 +1,15 @@
 header {
-  background-color: transparent;
+  --texto: #FFDFBD;
+  --texto-inverso: #460b0b;
+  --background-color: transparent;
+  background-color: var(--background-color);
+  color: var(--texto);
   position: fixed;
   display: flex;
   top: 0;
   left: 0;
   width: 100%;
-  height: 6em;
+  height: 4em;
   min-height: 3em;
   z-index: 999;
   justify-content: space-around;
@@ -13,7 +17,7 @@ header {
 }
 header button {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid var(--texto);
   border-radius: 12px;
   font-size: 1em;
   padding: 0.5rem 0.8rem;
@@ -27,19 +31,24 @@ header button:hover, header button:focus {
 }
 header .logo {
   margin-right: auto;
-  margin-left: 2em;
-  font-size: 2em;
-  color: #ceb78c;
+  margin-left: 0.5em;
+  font-size: 2.5em;
 }
 
 .nav__scroll {
-  background-color: #000;
+  --background-color: #000;
+  --texto: #FFDFBD;
+}
+.nav__scroll .logo {
+  display: none;
 }
 
 .nav__chill {
-  background-color: #360202;
+  --background-color: #460b0b;
+  --texto: #FFDFBD;
 }
 
 .nav__scroll__change {
-  background-color: #fbfb;
+  --background-color: #FFDFBD;
+  --texto: #460b0b;
 }

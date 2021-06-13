@@ -161,10 +161,10 @@ function toggleMenu() {
 ; // ADICIONAR INTERSECTION OBSERVER API PARA MUDAR A COR DA NAVBAR DEPENDENDO DA POSIÇÃO DO VIEWPORT.
 
 var header = document.querySelector("header");
-var sectionOne = document.querySelector(".column");
+var sectionOne = document.querySelector(".realeses__songs");
 var sectionOneOptions = {
   threShold: 0,
-  rootMargin: "-0px 0px 0px 0px"
+  rootMargin: "0px 0px -230px 0px"
 };
 sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
   entries.forEach(function (entry) {
@@ -177,10 +177,10 @@ sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObser
 }, sectionOneOptions);
 sectionOneObserver.observe(sectionOne);
 var navbar = document.querySelector("header");
-var sectionTwo = document.querySelector(".btn__md");
+var sectionTwo = document.querySelector(".chillhoop__setion");
 var sectionTwoOptions = {
-  threShold: 1,
-  rootMargin: "-0px 0px 0px 0px"
+  threShold: 0,
+  rootMargin: "0px 0px -590px 0px"
 };
 sectionTwoObserver = new IntersectionObserver(function (entries, sectionTwoObserver) {
   entries.forEach(function (entry) {
@@ -193,10 +193,10 @@ sectionTwoObserver = new IntersectionObserver(function (entries, sectionTwoObser
 }, sectionTwoOptions);
 sectionTwoObserver.observe(sectionTwo);
 var navScroll = document.querySelector("header");
-var sectionTree = document.querySelector(".nav__footer");
+var sectionTree = document.querySelector(".all__rights");
 var sectionTreeOptions = {
   threShold: 1,
-  rootMargin: "-0px 0px 0px 0px"
+  rootMargin: "0px 0px -20px 0px"
 };
 sectionTreeObserver = new IntersectionObserver(function (entries, sectionTreeObserver) {
   entries.forEach(function (entry) {
