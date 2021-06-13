@@ -65,27 +65,41 @@ footer {
 
 .all__rights {
     width: 100%;
-    background-color: #f20;
+    padding: .5em;
+    padding-bottom: .8em;
     display: flex;
 
     ul {
         margin-right: auto;
-        text-indent: 1.5em;
+        margin-left: 2.7em;
+        gap: .75em;
+        display: flex;
     }
 
     li {
         display: inline;
+        font-size: .890em;
     }
     
     a {
         text-decoration: none;
         color: #fff;
-        gap: 2em;
+
+        &:hover {
+            color: #ccc;
+        }
     }
 
     .rights__text {
         float: right;
         margin-right: 1.8em;
-        color: #fff;
+        color: #888;
+        text-transform: uppercase;
+        font-size: .91em;
+    }
+
+    span {
+        display: flex;
+        gap: .5em;
     }
 }

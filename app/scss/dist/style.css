@@ -775,25 +775,37 @@ footer nav .social__links .fab:hover {
 
 .all__rights {
   width: 100%;
-  background-color: #f20;
+  padding: 0.5em;
+  padding-bottom: 0.8em;
   display: flex;
 }
 .all__rights ul {
   margin-right: auto;
-  text-indent: 1.5em;
+  margin-left: 2.7em;
+  gap: 0.75em;
+  display: flex;
 }
 .all__rights li {
   display: inline;
+  font-size: 0.89em;
 }
 .all__rights a {
   text-decoration: none;
   color: #fff;
-  gap: 2em;
+}
+.all__rights a:hover {
+  color: #ccc;
 }
 .all__rights .rights__text {
   float: right;
   margin-right: 1.8em;
-  color: #fff;
+  color: #888;
+  text-transform: uppercase;
+  font-size: 0.91em;
+}
+.all__rights span {
+  display: flex;
+  gap: 0.5em;
 }
 
 * {
