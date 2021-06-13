@@ -107,12 +107,17 @@ $main-font: 'Suez One', serif;
             align-items: center;
             justify-content: center;
             margin-left: -3em;
+            
+   
+
 
             button {
                 padding: 1.2em 3.2em;
                 background-color: #FFDFBD;
                 outline: none;
                 border: #FFDFBD;
+                box-shadow: -15px 15px 0px rgb(255 223 189 / 10%);
+                
                 &:hover {
                 background-color: #e6cbaf;
                 }
@@ -127,14 +132,6 @@ $main-font: 'Suez One', serif;
                 font-weight: 300;
                 text-transform: uppercase;
               
-                &::before {
-                    content: "";
-                    padding: 1.3em 5.2em;
-                    bottom: 13%;
-                    left: 7%;
-                    position: absolute;
-                    background-color: #ffdfbd1f;
-            }
         }
     }
 

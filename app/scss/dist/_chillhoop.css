@@ -98,6 +98,7 @@
   background-color: #FFDFBD;
   outline: none;
   border: #FFDFBD;
+  box-shadow: -15px 15px 0px rgba(255, 223, 189, 0.1);
 }
 .chillhoop__setion .col__md .btn__md button:hover {
   background-color: #e6cbaf;
@@ -108,14 +109,6 @@
   font-family: "Suez One", serif;
   font-weight: 300;
   text-transform: uppercase;
-}
-.chillhoop__setion .col__md a::before {
-  content: "";
-  padding: 1.3em 5.2em;
-  bottom: 13%;
-  left: 7%;
-  position: absolute;
-  background-color: #ffdfbd1f;
 }
 .chillhoop__setion .col__wrap {
   padding: 10em;
