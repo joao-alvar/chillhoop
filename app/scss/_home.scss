@@ -22,10 +22,18 @@ $main-font: 'Suez One', serif;
     text-align: center;
 }
 
-    h1 {
+    .home__title {
         color: #FFDFBD;
         font-family: $main-font;
-        font-size: 3em;
+        font-size: 3.4375em;
+        font-weight: normal;
+    }
+
+    h1 {
+        margin-block-start: 0.2em;
+        margin-block-end: 0.3em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
     }
 
         p {
@@ -55,7 +63,6 @@ $main-font: 'Suez One', serif;
             border: 2px solid;
             box-sizing: border-box;
             border-radius: 10px;
-            padding: 4px 25px;
             font-weight: normal;
             text-align: center;
             display: inline-block;
@@ -68,19 +75,21 @@ $main-font: 'Suez One', serif;
 
         .btn__right {
             color: #FFDFBD;
+            padding: 4px 1.8em;
 
             &:hover {
-                color: #f5d7b8;
+                color: #e7cbb0;
             }
         }
 
         .btn__left {
+            padding: 6px 2.8em;
             color: #460B0B;
             border: #460B0B;
             background-color: #FFDFBD;
 
             &:hover {
-                background-color: #f5d7b8;
+                background-color: #e7cbb0;
             }
         }
 

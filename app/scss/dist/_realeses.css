@@ -24,10 +24,6 @@
 .realeses-container .glass-div::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background-color: rgba(7, 7, 7, 0.699);
@@ -68,8 +64,7 @@
 }
 .realeses-container .wrap__container .col-md {
   color: #fff;
-  /*      background-color: #99999999;*/
-  height: 10em;
+  height: 12em;
   width: 40em;
   display: flex;
   align-items: flex-end;
@@ -78,13 +73,15 @@
 .realeses-container .wrap__container .col-md h3 {
   font-size: 1.7em;
   position: relative;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 .realeses-container .wrap__container .col-md small {
-  gap: 2em;
-  text-indent: 20em;
   font-size: 0.9em;
   text-transform: uppercase;
-  color: #99999999;
+  color: #999999;
 }
 .realeses-container .wrap__container .col-md p {
   font-size: 0.8em;

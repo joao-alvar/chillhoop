@@ -22,21 +22,17 @@ $font-primaria: 'Open Sans', sans-serif;
         width: 100%;
         height: 45.09em;
         z-index: 5;
-        
     }
 
     .glass-div::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
         width: 100%;
         height: 100%;
         background-color: rgba(7, 7, 7, 0.699);
         backdrop-filter: blur(3px);
     }
+
     
     .realeses__play {
         position: absolute;
@@ -75,23 +71,25 @@ $font-primaria: 'Open Sans', sans-serif;
 
    .wrap__container .col-md {
         color: #fff;
-  /*      background-color: #99999999;*/
-        height: 10em;
+        height: 12em;
         width: 40em;
         display: flex;
         align-items: flex-end;
         text-align: left;
+
         h3 {
             font-size: 1.7em;    
-            position: relative;        
+            position: relative;   
+            margin-block-start: .2em;
+            margin-block-end: .2em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;     
         }
 
         small {
-            gap: 2em;
-            text-indent: 20em;
             font-size: .9em;
             text-transform: uppercase;
-            color: #99999999;
+            color: #999999;
             
         }
         
@@ -122,6 +120,7 @@ $font-primaria: 'Open Sans', sans-serif;
         font-size: .8em;
         cursor: pointer;
         z-index: 1;
+
         &:hover {
             background-color: transparent;
         }
