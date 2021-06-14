@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+$font-primaria: 'Open Sans', sans-serif;
 $main-font: 'Suez One', serif;
 
 header {
@@ -75,15 +77,18 @@ header {
     }
         .logo {
             font-size: 2.5em;
+            font-family: $main-font;
+            font-weight: normal;
 
             &::after {
                 content: "music";
                 font-size: .280em;
                 text-transform: uppercase;
+                font-family: $font-primaria;
                 display: block;
                 margin-block-start: -.8em;
                 margin-block-end: .2em;
-                margin-inline-start: 123px;
+                margin-inline-start: 128px;
                 margin-inline-end: 0px;     
             }
         }
