@@ -24,7 +24,7 @@ Titulos = ["Higher", "Toddle", 'Solstice', 'Bliss', 'Simplexity'];
 loadMusica(musicas[musicaIndex]);
 
 // Atualiza detalhes da musicas
-function loadMusica(musica) {
+function loadMusica() {
   Artista.innerHTML = Artistas[musicaIndex];
   titulo.innerHTML = Titulos[musicaIndex];
   audio.src = musicas[musicaIndex];
