@@ -87,7 +87,10 @@ header {
                 margin-inline-end: 0px;     
             }
         }
-    
+        
+        .fa-wolf-pack-battalion {
+            display: none;
+        }
   
 }
 
@@ -98,6 +101,11 @@ header {
     .logo {
         display: none;
     }
+    
+    .fa-wolf-pack-battalion {
+        font-size: 2em;
+        display: block;
+    }
 }
 
 .nav__chill {
@@ -107,6 +115,11 @@ header {
     .logo {
         display: none;
     }
+
+    .fa-wolf-pack-battalion {
+        font-size: 2em;
+        display: block;
+    }
 }
 
 .nav__scroll__change {
@@ -115,5 +128,10 @@ header {
 
     .logo {
         display: none;
+    }
+
+    .fa-wolf-pack-battalion {
+        font-size: 2em;
+        display: block;
     }
 }

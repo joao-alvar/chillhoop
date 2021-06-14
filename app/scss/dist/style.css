@@ -80,6 +80,9 @@ header .logo::after {
   margin-inline-start: 123px;
   margin-inline-end: 0px;
 }
+header .fa-wolf-pack-battalion {
+  display: none;
+}
 
 .nav__scroll {
   --background-color: #000;
@@ -87,6 +90,10 @@ header .logo::after {
 }
 .nav__scroll .logo {
   display: none;
+}
+.nav__scroll .fa-wolf-pack-battalion {
+  font-size: 2em;
+  display: block;
 }
 
 .nav__chill {
@@ -96,6 +103,10 @@ header .logo::after {
 .nav__chill .logo {
   display: none;
 }
+.nav__chill .fa-wolf-pack-battalion {
+  font-size: 2em;
+  display: block;
+}
 
 .nav__scroll__change {
   --background-color: #FFDFBD;
@@ -103,6 +114,10 @@ header .logo::after {
 }
 .nav__scroll__change .logo {
   display: none;
+}
+.nav__scroll__change .fa-wolf-pack-battalion {
+  font-size: 2em;
+  display: block;
 }
 
 .home {
