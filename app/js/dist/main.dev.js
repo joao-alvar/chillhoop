@@ -11,19 +11,21 @@ var volume = document.getElementById('volumeslider');
 var volumeConatiner = document.getElementById('volume');
 var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
-var album = document.getElementById('album__track'); // Titulo da Musica
+var album = document.getElementById('album__track'); // Mantem o controle da musica e dados como nome dos artistas o nome das musicas e capa dos albums 
 
-var musicas = ['Simplexity', 'Bliss', 'Higher', 'Solstice', 'Toddle']; // Mantem o controle da musica
-
-var musicaIndex = 2; // Carrega inicialmente os detalhes da música no DOM
+var musicaIndex = 0;
+musicas = ['./musicas/Higher.mp3', './musicas/Toddle.mp3', './musicas/Solstice.mp3', './musicas/Bliss.mp3', './musicas/Simplexity.mp3'];
+albums = ['./imagens/Higher.jpg', './imagens/Toddle.jpg', './imagens/Solstice.jpg', './imagens/Bliss.jpg', './imagens/Simplexity.jpg'];
+Artistas = ['Misha, jussi Halme', 'Oddfish', 'Middle School, Henry Gritton', 'Misha, jussi Halme', 'Evil Needle'];
+Titulos = ["Higher", "Toddle", 'Solstice', 'Bliss', 'Simplexity']; // Carrega inicialmente os detalhes da música no DOM
 
 loadMusica(musicas[musicaIndex]); // Atualiza detalhes da musicas
 
 function loadMusica(musica) {
-  titulo.innerText = musica;
-  Artista.innerText = musica;
-  audio.src = "./musicas/".concat(musica, ".mp3");
-  album.src = "./imagens/".concat(musica, ".jpg");
+  Artista.innerHTML = Artistas[musicaIndex];
+  titulo.innerHTML = Titulos[musicaIndex];
+  audio.src = musicas[musicaIndex];
+  album.src = albums[musicaIndex];
 } // Toca musicas
 
 
@@ -92,7 +94,43 @@ playBtn.addEventListener('click', function () {
   } else {
     musicaPlay();
   }
-}); // Trocar musica
+}); // atualiza progresso.max da musica  duração, o mesmo para o progresso.value, atualiza o currentTime/duration no DOM
+
+function updateProgressoValue() {
+  progresso.max = audio.duration;
+  progresso.value = audio.currentTime;
+  document.querySelector('.currentTime').innerHTML = formatTime(Math.floor(audio.currentTime));
+
+  if (document.querySelector('.durationTime').innerHTML === "NaN:NaN") {
+    document.querySelector('.durationTime').innerHTML = "0:00";
+  } else {
+    document.querySelector('.durationTime').innerHTML = formatTime(Math.floor(audio.duration));
+  }
+}
+
+; // converter musica.currentTime e musica.duration para formato MM:SS 
+
+function formatTime(seconds) {
+  var min = Math.floor(seconds / 60);
+  var sec = Math.floor(seconds - min * 60);
+
+  if (sec < 10) {
+    sec = "0".concat(sec);
+  }
+
+  ;
+  return "".concat(min, ":").concat(sec);
+}
+
+; // rodar updateProgressoValue function cada 1/2 secundos para mostrar mudanças no progresso e na musica.currentTime no DOM
+
+setInterval(updateProgressoValue, 500); // function onde o progresso.value é mudado quando slider a barra de progresso é adiantada sem audio auto-playing 
+
+function mudarProgresso() {
+  audio.currentTime = progresso.value;
+}
+
+; // Trocar musica
 
 prevBtn.addEventListener('click', prevMusica);
 proxBtn.addEventListener('click', proxMusica); // Atualizar Time/musica 

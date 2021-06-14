@@ -162,7 +162,6 @@ $font-primaria: 'Open Sans', sans-serif;
     }
 
     .column-container {
-        background-color: #1DB954;
         width: 95%;
         left: 5%;
         right: 5%;
@@ -194,11 +193,14 @@ $font-primaria: 'Open Sans', sans-serif;
     }
 
     .realeses__border {
-        padding: .9em;
-        width: 60%;
+        background-color: #888;
+        width: 69%;
+        position: absolute;
+        height: .0791px;
+        top: 2%;
+        left: 54%;
+        transform: translate(-50%, -50%);
         margin: 0 auto;
-        margin-right: 12em;
-        border-top: .5px solid #99999999;
     }
     
     .upper__text {
