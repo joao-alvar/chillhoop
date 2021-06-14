@@ -8,6 +8,7 @@ header {
     --texto: #FFDFBD;
     --texto-inverso: #460b0b;
     --background-color: transparent; 
+    --hover: #e6cbaf;
 
     background-color: var(--background-color);
     color: var(--texto);
@@ -31,6 +32,11 @@ header {
         justify-content: center;
         gap: .5em;
 
+        a { 
+        text-decoration: none;
+        color: var(--texto);
+    }
+
         .logo__text {
             font-size: .85em;
             font-family: $main-font;
@@ -52,9 +58,15 @@ header {
         font-family: $main-font;
         font-weight: 500;
 
+      
+
         a {
         text-decoration: none;
         color: var(--texto);
+        &:hover {
+            color: var(--hover);
+        }
+        
         }
     }
 
@@ -95,6 +107,11 @@ header {
         
         .fa-wolf-pack-battalion {
             display: none;
+            font-size: 2em;
+            
+        &:hover {
+            color: var(--hover);
+        }
         }
   
 }
@@ -108,7 +125,6 @@ header {
     }
     
     .fa-wolf-pack-battalion {
-        font-size: 2em;
         display: block;
     }
 }
@@ -122,7 +138,6 @@ header {
     }
 
     .fa-wolf-pack-battalion {
-        font-size: 2em;
         display: block;
     }
 }
@@ -130,13 +145,13 @@ header {
 .nav__scroll__change {
     --background-color: #FFDFBD;
     --texto: #460b0b;
+    --hover: #642727;
 
     .logo {
         display: none;
     }
 
     .fa-wolf-pack-battalion {
-        font-size: 2em;
         display: block;
     }
 }
