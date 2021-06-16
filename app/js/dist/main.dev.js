@@ -343,3 +343,11 @@ document.querySelector('.stopButton').onclick = function () {
     sounds[i].pause();
   }
 };
+
+function toggleMessage() {
+  var messageToggle = document.querySelector('.messageButton');
+  var playerMenu = document.querySelector('.message__container');
+  playerMenu.classList.toggle('active');
+}
+
+;

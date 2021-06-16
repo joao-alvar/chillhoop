@@ -340,6 +340,22 @@
       </div>
     </div>
   </footer>
+  
+  <section id="mine" class="message__container">
+    <script>
+      var div = document.getElementById('mine');
+      div.style.display = 'none';
+      
+      // Mostra a mensagem após 4 segundos
+      setTimeout(function() {
+          div.style.display = 'block';
+      }, 4000);</script>
+    <div class="message__container__inner">
+    <div class="message__content">
+      <h3>clique na seta no canto inferior direito para acessar o player, divirta-se.</h3>
+    </div>
+    <i class="fa fa-times messageButton" onclick="toggleMessage();"></i>
+  </section>
 
   <!-- PLAYER SECTION COMEÇA -->
   <span class="menu__player"><i class="fas fa-chevron-down player__menu" onclick="toggleMenu();"></i></span>
@@ -385,6 +401,6 @@
       </div>
     </div>
     <audio class="audio"></audio>
-    <script src="app/js/main.js"></script>
+    <script src="app/js/main.js"></>
 </body>
 </html>

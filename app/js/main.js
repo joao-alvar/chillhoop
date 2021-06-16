@@ -398,3 +398,9 @@ document.querySelector('.stopButton').onclick = function() {
   var sounds = document.querySelectorAll('audio');
   for(i=0; i<sounds.length; i++) sounds[i].pause();
 };
+
+function toggleMessage(){
+  const messageToggle = document.querySelector('.messageButton');
+  const playerMenu = document.querySelector('.message__container');
+  playerMenu.classList.toggle('active');
+};
