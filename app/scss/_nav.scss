@@ -92,6 +92,12 @@ header {
             font-family: $main-font;
             font-weight: normal;
 
+            @media (max-width: 780px) {
+                display: none;
+
+                
+            }
+
             &::after {
                 content: "music";
                 font-size: .280em;
@@ -108,6 +114,11 @@ header {
         .fa-wolf-pack-battalion {
             display: none;
             font-size: 2em;
+
+            @media (max-width: 780px) {
+                display: block;
+
+            }
             
         &:hover {
             color: var(--hover);

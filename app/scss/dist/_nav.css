@@ -76,6 +76,11 @@ header .logo {
   font-family: "Suez One", serif;
   font-weight: normal;
 }
+@media (max-width: 780px) {
+  header .logo {
+    display: none;
+  }
+}
 header .logo::after {
   content: "music";
   font-size: 0.28em;
@@ -90,6 +95,11 @@ header .logo::after {
 header .fa-wolf-pack-battalion {
   display: none;
   font-size: 2em;
+}
+@media (max-width: 780px) {
+  header .fa-wolf-pack-battalion {
+    display: block;
+  }
 }
 header .fa-wolf-pack-battalion:hover {
   color: var(--hover);

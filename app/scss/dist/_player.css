@@ -21,6 +21,11 @@
   object-fit: cover;
   background-image: url("../imagens/.jpg");
 }
+@media (max-width: 860px) {
+  .player__container .track__imagem {
+    top: 0.1em;
+  }
+}
 
 .artista__info {
   left: 5.4em;
@@ -35,6 +40,16 @@
 .artista__info #artista {
   font-size: 0.8em;
   color: #d1c1c1;
+}
+@media (max-width: 860px) {
+  .artista__info {
+    top: 0.8em;
+  }
+}
+@media (max-width: 430px) {
+  .artista__info {
+    top: 0.1em;
+  }
 }
 
 .volume {
@@ -80,6 +95,11 @@
 .volume input[type=range]:hover::-webkit-slider-runnable-track {
   background: #cccccc;
 }
+@media (max-width: 430px) {
+  .volume {
+    display: none;
+  }
+}
 
 .controles {
   margin: 0 auto;
@@ -87,6 +107,14 @@
   display: flex;
   justify-content: center;
   gap: 1em;
+}
+@media (max-width: 430px) {
+  .controles {
+    margin: 0;
+    position: absolute;
+    right: -20%;
+    top: 20%;
+  }
 }
 .controles button {
   background-color: transparent;
@@ -121,9 +149,53 @@
 .fa-chevron-down {
   color: #fe8daa;
   position: fixed;
-  z-index: 1000;
+  z-index: "";
   margin-left: auto;
   right: 1em;
   bottom: 0.91em;
   cursor: pointer;
+}
+
+.fa-chevron-down {
+  z-index: 1000;
+}
+
+.fa-chevron-up {
+  z-index: 1802;
+  color: #fe8daa;
+  position: fixed;
+  margin-left: auto;
+  right: 1em;
+  bottom: 0.91em;
+  cursor: pointer;
+}
+
+.currentTime {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  color: #fff;
+}
+
+.durationTime {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  color: #fff;
+}
+
+.musica__info__container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 0 2.5em 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .musica__info__container {
+    display: none;
+  }
 }

@@ -1,21 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 .home {
   width: 100%;
-  height: 41.09em;
+  height: auto;
   background-image: url("/imagens/wrap-img/home-bg.jpg");
   background-size: cover;
   object-fit: cover;
 }
 .home .home__container {
   width: 100%;
-  height: 100%;
+  height: 41.09em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.home .home__inner__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .inner__content {
+  width: 1000px;
+}
 .home .home__inner {
-  width: 50%;
+  width: 70%;
+  flex-direction: column;
   text-align: center;
+}
+@media (max-width: 900px) {
+  .home .home__inner {
+    width: 98%;
+  }
+}
+@media (max-width: 488px) {
+  .home .home__inner {
+    width: 100%;
+    font-size: 65.5%;
+  }
+  .home .home__inner .btn {
+    border-radius: 5px;
+  }
 }
 .home .home__title {
   color: #FFDFBD;
@@ -41,7 +66,12 @@
   font-size: 0.96em;
   line-height: 1.5em;
   text-shadow: 1px 1px 2px #000;
-  padding: 0 4em 0;
+  padding: 0 19% 0;
+}
+@media (max-width: 900px) {
+  .home .home__inner__content {
+    padding: 0 0 0;
+  }
 }
 .home .home__btn {
   width: 100%;

@@ -33,7 +33,8 @@
     <!-- HOME SECTION COMEÇA -->
     <section class="home">
     <div class="home__container">
-      <div class="home__inner">
+      <div class="home__inner__container">
+      <div class="home__inner inner__content">
         <h1 class="home__title">
           Free-to-use music
           <br>
@@ -48,20 +49,22 @@
           <a class="btn btn__left" href="#"> Sign up </a>
         </div>
     </div>
+      </div>
     </div>
     </section>
 
     <!-- REALESES SECTION COMEÇA -->
     <section class="realeses-container" id="realeses">
+      <div class="realeses__inner__container">
     <div class="glass-div">
       <div class="realeses__play">
         <div class="wrap__container">
         <div class="wrap">
-          <img src="imagens/wrap-img/Higher-wrap.jpg" alt="">
+          <div class="img__wrap"></div>
         </div>
         <div class="col-md">
           <ul>
-        <li><h3>Higher</h3></li>
+        <li><h3>Bliss (A Felicidade)</h3></li>
         <small>misha, jussi halme</small>
         <li>
         <p>At the end of last year, Finnish producer Misha and legendary jazz pianist Jussi Halme joined forces to release their collaborative and upbeat single “Bliss”....
@@ -79,58 +82,63 @@
         </div>
       <div class="realeses__songs">
         <div class="realeses-row">
-          <span class="upper__text"><h3>latest realeses</h3></span>
-          <div class="realeses__border"></div>
-          <span class="upper__text-2"><h3>see all  <i class="fas fa-arrow-right"></i></h3></span>
+          <span class="upper__text__container">
+            <h3 class="upper__text">latest realeses</h3>
+            <div class=" border__line"></div>
+         <h3 class="upper__text-2">see all  <i class="fas fa-arrow-right"></i></h3>
+        </span>
           <div class="column-container">
-          <div class="column">
+          <div class="column col__1">
             <img src="imagens/wrap-img/Higher-wrap.jpg" alt="Snow" style="width:100%">
             <ul>
               <li><h2>Higher</h2></li>
-              <li><small>misha, jussi halme</small></li>
+              <li><i>misha, jussi halme</i></li>
             </ul>
           </div>
-          <div class="column">
+          <div class="column col__2">
             <img src="imagens/wrap-img/Bliss-wrap.jpg" alt="Forest" style="width:100%">
             <ul>
-              <li><h2>Bliss</h2></li>
-              <li><small>misha, jussi halme</small></li>
+              <li><h2>Bliss (a felicidade)</h2></li>
+              <li><i>misha, jussi halme</i></li>
             </ul>
           </div>
-          <div class="column">
+          <div class="column col__3">
             <img src="imagens/wrap-img/Solstice-wrap.jpg" alt="Mountains" style="width:100%">
             <ul>
               <li><h2>Solstice</h2></li>
-              <li><small>Middle School, Henry Gritton</small></li>
+              <li><i>Middle School, Henry Gritton</i></li>
             </ul>
           </div>
           
-          <div class="column">
+          <div class="column col__4">
             <img src="imagens/wrap-img/Toddle-wrap.jpg" alt="Mountains" style="width:100%">
             <ul>
               <li><h2>Toddler</h2></li>
-              <li><small>oddfish</small></li>
+              <li><i>oddfish</i></li>
             </ul>
           </div>
 
-          <div class="column">
+          <div class="column col__5">
             <img src="imagens/wrap-img/Simplexity-wrap.jpg" alt="Mountains" style="width:100%">
             <ul>
-              <li><h2>Higher</h2></li>
-              <li><small>Evil Needle</small></li>
+              <li><h2>Simplexity</h2></li>
+              <li><i>Evil Needle</i></li>
             </ul>
           </div>
           </div>
         </div>
       </div>
     </div>
+      </div>
   </section>
 
   <!-- CHILLHOOP SECTION COMEÇA -->
   <section class="chillhoop__setion">
     <div class="chillhoop">
       <div class="chilhoop-wrap">
+        <div class="chill__bg__image__wrap"></div>
         <div class="col__md">
+          <div class="col__md__inner">
           <div class="md__wrap">
             <div class="inner__md-wrap">
               <div class="md__title">
@@ -138,78 +146,93 @@
               </div>
               <div class="md__p">
                 <p class="primary__p">Here's a playlist displaying the <span>variety</span> and <span>quality</span> of our music</p>
+                <br>
                 <p class="secondary__p">Once you signed up, you can download <span>all of the tracks</span> available and for your ease
                    we will send you a download link for the playlist so you can get started right away.</p>
                    
               </div>
               <div class="btn__md"><button><a href="#">Get started!</a></button></div>
+          </div>
             </div>
           </div>
         </div>
           <div class="col__wrap"> 
-            <div class="chill__bg__image__wrap"></div>
+            <div class="col__wrap__inner">
             <div class="top__list">
               <div class="top__inner__list">
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <div id="controls">
+                  <i id="menu-buttonOne" class="fas fa-play-circle" onclick="togglePlayOne()"></i>  
+                  <audio id="myAudioOne" src="musicas/Sunrise-hike.mp3"></audio>
+                  </div>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>sunrise hike</li>
+                    <li><a href="#">Ruck P</a></li>
+                  </ul>
+                </div>
+               
+                <div class="top__artist">
+                  <div id="controls">
+                <i id="menu-buttonTwo" class="fa fa-play-circle" onclick="togglePlayTwo()"></i>
+                <audio id="myAudioTwo" src="musicas/Roses-n-Flames.mp3"></audio>
+                  </div>
+                  <ul>
+                    <li>Roses n Flames</li>
+                    <li><a href="#">C Y G N</a></li>
                   </ul>
                 </div>
 
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonThree" class="fa fa-play-circle" onclick="togglePlayThree();"></i>
+                  <audio id="myAudioThree" src="musicas/Traveling.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>traveling</li>
+                    <li><a href="#">anbuu</a></li>
                   </ul>
                 </div>
 
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonFour" class="fa fa-play-circle" onclick="togglePlayFour();"></i>
+                  <audio id="myAudioFour" src="musicas/Cascade.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
-                  </ul>
-                </div>
-
-                <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
-                  <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>cascade</li>
+                    <li><a href="#">knowmadic</a></li>
                   </ul>
                 </div>
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonFive" class="fa fa-play-circle" onclick="togglePlayFive();"></i>
+                  <audio id="myAudioFive" src="musicas/Meadow.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>meadow</li>
+                    <li><a href="#">iamalex, azula, Dayle</a></li>
                   </ul>
                 </div>
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonSix" class="fa fa-play-circle" onclick="togglePlaySix();"></i>
+                  <audio id="myAudioSix" src="musicas/Vivid.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>vivid</li>
+                    <li><a href="#">chromonicci</a></li>
                   </ul>
                 </div>
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonSeven" class="fa fa-play-circle stopButton" onclick="togglePlaySeven();"></i>
+                  <audio id="myAudioSeven" src="musicas/Waterfalls.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>waterfalls</li>
+                    <li><a href="#">G Mills, Molly McPhau</a></li>
                   </ul>
                 </div>
                 <div class="top__artist">
-                  <i class="fas fa-play-circle"></i>
+                  <i id="menu-buttonEight" class="fa fa-play-circle" onclick="togglePlayEight();"></i>
+                  <audio id="myAudioEight" src="musicas/Reflect.mp3"></audio>
                   <ul>
-                    <li>New song</li>
-                    <li><a href="#">New artist</a></li>
+                    <li>reflect</li>
+                    <li><a href="#">SwuM, Ben Belial</a></li>
                   </ul>
                 </div>
               </div>
+            </div>
             </div>
           </div>      
       </div>
@@ -282,7 +305,7 @@
   </div>    
 </section>
 
-  <!-- PLAYER SECTION COMEÇA -->
+  <!-- FOOTER SECTION COMEÇA -->
   <footer>
     <div class="nav__footer">
       <nav>
@@ -319,7 +342,7 @@
   </footer>
 
   <!-- PLAYER SECTION COMEÇA -->
-  <span class="menu__player"><i id="toggle" class="fas fa-chevron-down" onclick="toggleMenu();"></i></span>
+  <span class="menu__player"><i class="fas fa-chevron-down player__menu" onclick="toggleMenu();"></i></span>
   <div id="player" class="player__container">
     <div class="musica-container" id="musica-container">
         <div class="track__imagem">
@@ -329,26 +352,28 @@
         <h4 id="titulo"></h4>
           <p id="artista"></p>
           </div>
-          <div class="currentTime"></div>
+        <div class="musica__info__container">
         <div class="musica-info">
+          <div class="currentTime"></div>
+          <div class="durationTime"></div>
           <div class="progresso-container" id="progresso-container">
             <div class="progresso" id="progresso"></div>
           </div>
         </div>
-        <audio src="./musicas/ukulele.mp3" class="audio"></audio>
+        </div>
        
         <div class="controles">
           <button id="prev" class="action-btn">
             <i class="fas fa-backward"></i>
           </button>
-          <button id="play" class="action-btn action-btn-big">
+          <button id="playBtn" class="action-btn action-btn-big">
             <i class="fas fa-play"></i>
           </button>
 
           <button id="prox" class="action-btn">
             <i class="fas fa-forward"></i>
           </button>
-          <div class="durationTime"></div>
+      
 
         </div>
         <div class="volume">
@@ -359,6 +384,7 @@
       </div>
       </div>
     </div>
+    <audio class="audio"></audio>
     <script src="app/js/main.js"></script>
 </body>
 </html>

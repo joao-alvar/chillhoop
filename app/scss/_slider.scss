@@ -50,6 +50,16 @@ $font-slider:  'Open Sans', sans-serif;
     border-right: 4px solid #444;
     border-bottom: 4px solid #444;
     transform: translate(-50%, -50%) rotate(135deg);
+
+    @media (max-width: 1000px) {
+      width: 10px;
+      height: 10px;
+    }
+    
+    @media (max-width: 320px) {
+      width: 9px;
+      height: 9px;
+      }
   }
   
   .sliderBtn__next::after {
@@ -117,6 +127,21 @@ $font-slider:  'Open Sans', sans-serif;
     flex-direction: column;
     text-align: center;
     width: 60%;
+
+    @media (max-width: 1000px) {
+    padding: 0;
+    width: 80%;
+    }
+    
+    @media (max-width: 600px) {
+      padding: 0;
+      width: 95%;
+      }
+      
+    @media (max-width: 320px) {
+      padding: 0;
+      width: 97%;
+      }
     }
 
     p {

@@ -1,5 +1,6 @@
 var playerContainer = document.getElementById('musica-container');
-var playBtn = document.getElementById('play');
+var playerTop = document.querySelector('.top__artist');
+var playBtn = document.getElementById('playBtn');
 var prevBtn = document.getElementById('prev');
 var proxBtn = document.getElementById('prox');
 
@@ -12,26 +13,40 @@ var titulo = document.getElementById('titulo');
 var Artista = document.getElementById('artista');
 var album = document.getElementById('album__track');
 
-// Mantem o controle da musica e dados como nome dos artistas o nome das musicas e capa dos albums 
-let musicaIndex = 0;
-musicas = ['./musicas/Higher.mp3', './musicas/Toddle.mp3', './musicas/Solstice.mp3', './musicas/Bliss.mp3', './musicas/Simplexity.mp3']; 
-albums = ['./imagens/Higher.jpg', './imagens/Toddle.jpg', './imagens/Solstice.jpg', './imagens/Bliss.jpg', './imagens/Simplexity.jpg']; 
-Artistas = ['Misha, jussi Halme', 'Oddfish', 'Middle School, Henry Gritton', 'Misha, jussi Halme', 'Evil Needle']; 
-Titulos = ["Higher", "Toddle", 'Solstice', 'Bliss', 'Simplexity']; 
+const baseArquivo = './musicas/';
 
+// Mantem o controle da musica e dados como nome dos artistas o nome das LisamusicasLista e capa dos albums 
+
+const musicasLista = [`${baseArquivo}Higher.mp3`, `${baseArquivo}Toddle.mp3`, `${baseArquivo}Solstice.mp3`,
+ `${baseArquivo}Bliss.mp3`, `${baseArquivo}Simplexity.mp3`, `${baseArquivo}Sunrise-hike.mp3`, `${baseArquivo}Roses-n-Flames.mp3`,
+ `${baseArquivo}Traveling.mp3`, `${baseArquivo}Cascade.mp3`, `${baseArquivo}Meadow.mp3`, `${baseArquivo}Vivid.mp3`, 
+ `${baseArquivo}Waterfalls.mp3`, `${baseArquivo}Reflect.mp3`];
+
+let musicaIndex = 0;
+albums = ['./imagens/Higher.jpg', './imagens/Toddle.jpg', './imagens/Solstice.jpg', './imagens/Bliss.jpg', 
+'./imagens/Simplexity.jpg', './imagens/Sunrise-hike.jpg', './imagens/Roses-n-flames.jpg', './imagens/Traveling.jpg', 
+'./imagens/Cascade.jpg', './imagens/traveling.jpg', './imagens/Vivid.jpg', './imagens/Waterfalls.jpg', './imagens/Reflect.jpg',]; 
+
+Artistas = ['Misha, jussi Halme', 'Oddfish', 'Middle School, Henry Gritton', 'Misha, jussi Halme', 'Evil Needle',
+ 'Ruck P', 'C Y G N', 'Anbuu', 'Knowmadic', 'iamalex, azula, Dayle', 'chromonicci', 'G Mills, Molly McPhaul', 'SwuM, Ben Belial']; 
+
+Titulos = ["Higher", "Toddle", 'Solstice', 'Bliss', 'Simplexity', 'Sunrise Hike', 'Roses n Flames', ' Traveling',
+ 'Cascade', 'Meadow', 'Vivid', 'Waterfalls', 'Reflect']; 
+
+//constructor(this.song = songList[this.songIndex]); 
 
 // Carrega inicialmente os detalhes da música no DOM
-loadMusica(musicas[musicaIndex]);
+loadMusica(musicasLista[musicaIndex]);
 
-// Atualiza detalhes da musicas
+// Atualiza detalhes da LisamusicasLista
 function loadMusica() {
   Artista.innerHTML = Artistas[musicaIndex];
   titulo.innerHTML = Titulos[musicaIndex];
-  audio.src = musicas[musicaIndex];
+  audio.src = musicasLista[musicaIndex];
   album.src = albums[musicaIndex];
 }
 
-// Toca musicas
+// Toca LisamusicasLista
 function musicaPlay() {
   playerContainer.classList.add('play');
   playBtn.querySelector('i.fas').classList.remove('fa-play');
@@ -40,7 +55,7 @@ function musicaPlay() {
   audio.play();
 }
 
-// Pausar musicas
+// Pausar LisamusicasLista
 function pauseMusica() {
   playerContainer.classList.remove('play');
   playBtn.querySelector('i.fas').classList.add('fa-play');
@@ -54,10 +69,10 @@ function prevMusica() {
   musicaIndex--;
 
   if (musicaIndex < 0) {
-    musicaIndex = musicas.length - 1;
+    musicaIndex = musicasLista.length - 1;
   }
 
-  loadMusica(musicas[musicaIndex]);
+  loadMusica(musicasLista[musicaIndex]);
 
   musicaPlay();
 }
@@ -66,11 +81,11 @@ function prevMusica() {
 function proxMusica() {
   musicaIndex++;
 
-  if (musicaIndex > musicas.length - 1) {
+  if (musicaIndex > musicasLista.length - 1) {
     musicaIndex = 0;
   }
 
-  loadMusica(musicas[musicaIndex]);
+  loadMusica(musicasLista[musicaIndex]);
 
   musicaPlay();
 }
@@ -101,7 +116,6 @@ playBtn.addEventListener('click', () => {
     musicaPlay();
   }
 });
-
 
 // atualiza progresso.max da musica  duração, o mesmo para o progresso.value, atualiza o currentTime/duration no DOM
 function updateProgressoValue() {
@@ -202,9 +216,10 @@ document.addEventListener('keydown',function(e){
 /* PLAYER TOGGLE */
 
 function toggleMenu(){
-  const menuToggle = document.querySelector('#toggle');
-  const navigation = document.querySelector('.player__container');
-  navigation.classList.toggle('active');
+  const menuToggle = document.querySelector('.player__menu');
+  const playerMenu = document.querySelector('.player__container');
+  menuToggle.classList.toggle('fa-chevron-up');
+  playerMenu.classList.toggle('active');
 };
 
 // ADICIONAR INTERSECTION OBSERVER API PARA MUDAR A COR DA NAVBAR DEPENDENDO DA POSIÇÃO DO VIEWPORT.
@@ -288,3 +303,98 @@ sectionTreeOptions);
 sectionTreeObserver.observe(sectionTree);
 
 
+function togglePlayOne() {
+  document.getElementById("menu-buttonOne").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonOne").classList.toggle('fa-pause-circle');
+  var myAudioOne = document.getElementById("myAudioOne");
+  return myAudioOne.paused ? myAudioOne.play() : myAudioOne.pause();
+}
+  function togglePauseOne() {
+    document.getElementById("menu-buttonOne").classList.toggle('fa-pause-circle');
+    document.getElementById("menu-buttonOne").classList.toggle('fa-play-circle');
+    var myAudioOne = document.getElementById("myAudioOne");
+    return myAudioOne.paused ? myAudioOne.play() : myAudioOne.pause();
+}
+
+
+myAudioOne.onended = () => {
+  // Once a song is over play next song.
+  myAudioOne.togglePauseOne();
+};
+document.querySelector('#menu-buttonOne').addEventListener('click', classToggle);
+
+function togglePlayTwo() {
+  document.getElementById("menu-buttonTwo").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonTwo").classList.toggle('fa-pause-circle');
+  var myAudioTwo = document.getElementById("myAudioTwo");
+  return myAudioTwo.paused ? myAudioTwo.play() : myAudioTwo.pause();
+}
+document.querySelector('#menu-buttonTwo').addEventListener('click', classToggle);
+
+
+function togglePlayThree() {
+  document.getElementById("menu-buttonThree").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonThree").classList.toggle('fa-pause-circle');
+  var myAudioThree = document.getElementById("myAudioThree");
+  return myAudioThree.paused ? myAudioThree.play() : myAudioThree.pause();
+}
+document.querySelector('.menu-buttonThree').addEventListener('click', classToggle);
+
+
+
+function togglePlayFour() {
+  document.getElementById("menu-buttonFour").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonFour").classList.toggle('fa-pause-circle');
+  var myAudioFour = document.getElementById("myAudioFour");
+  return myAudioFour.paused ? myAudioFour.play() : myAudioFour.pause();
+}
+document.querySelector('.menu-buttonFour').addEventListener('click', classToggle);
+
+
+
+function togglePlayFive() {
+  document.getElementById("menu-buttonFive").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonFive").classList.toggle('fa-pause-circle');
+  var myAudioFive = document.getElementById("myAudioFive");
+  return myAudioFive.paused ? myAudioFive.play() : myAudioFive.pause();
+}
+document.querySelector('.menu-buttonFive').addEventListener('click', classToggle);
+
+
+myAudioFive.addEventListener('ended', togglePlayFive);
+
+
+
+function togglePlaySix() {
+  document.getElementById("menu-buttonSix").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonSix").classList.toggle('fa-pause-circle');
+  var myAudioSix = document.getElementById("myAudioSix");
+  return myAudioSix.paused ? myAudioSix.play() : myAudioSix.pause();
+}
+document.querySelector('.menu-buttonSix').addEventListener('click', classToggle);
+
+
+
+function togglePlaySeven() {
+  document.getElementById("menu-buttonSeven").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonSeven").classList.toggle('fa-pause-circle');
+  var myAudioSeven = document.getElementById("myAudioSeven");
+  return myAudioSeven.paused ? myAudioSeven.play() : myAudioSeven.pause();
+}
+document.querySelector('.menu-buttonSeven').addEventListener('click', classToggle);
+
+
+
+function togglePlayEight() {
+  document.getElementById("menu-buttonEight").classList.toggle('fa-play-circle');
+  document.getElementById("menu-buttonEight").classList.toggle('fa-pause-circle');
+  var myAudioEight = document.getElementById("myAudioEight");
+  return myAudioEight.paused ? myAudioEight.play() : myAudioEight.pause();
+}
+document.querySelector('.menu-buttonEight').addEventListener('click', classToggle);
+
+
+document.querySelector('.stopButton').onclick = function() {
+  var sounds = document.querySelectorAll('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+};

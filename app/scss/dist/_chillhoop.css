@@ -10,8 +10,18 @@
   z-index: 1;
 }
 .chillhoop__setion .chillhoop {
-  height: 40em;
+  height: 41em;
   width: 100%;
+}
+@media (max-width: 1200px) {
+  .chillhoop__setion .chillhoop {
+    height: 63em;
+  }
+}
+@media (max-width: 590px) {
+  .chillhoop__setion .chillhoop {
+    height: 65em;
+  }
 }
 .chillhoop__setion .chilhoop-wrap {
   position: relative;
@@ -32,6 +42,11 @@
   filter: grayscale(100%);
   opacity: 0.5;
 }
+@media (max-width: 1200px) {
+  .chillhoop__setion .chill__bg__image__wrap {
+    z-index: -1;
+  }
+}
 .chillhoop__setion .col__md {
   padding: 10em;
   width: 50%;
@@ -44,12 +59,33 @@
   justify-content: center;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md {
+    top: 0;
+    float: none;
+    height: 50%;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+  }
+  .chillhoop__setion .col__md .col__md__inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+}
 .chillhoop__setion .col__md .md__wrap {
   position: absolute;
   top: 10%;
   bottom: 5%;
   left: 18%;
   right: 8%;
+}
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .md__wrap {
+    left: 2%;
+    right: 2%;
+  }
 }
 .chillhoop__setion .col__md .inner__md-wrap {
   width: 100%;
@@ -65,13 +101,31 @@
   font-family: "Suez One", serif;
   font-weight: 400;
 }
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .md__title {
+    text-align: center;
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  .chillhoop__setion .col__md .md__title {
+    font-size: 0.9em;
+  }
+}
 .chillhoop__setion .col__md .md__p {
-  padding: 1em 8.5em 0.2em;
+  padding: 0.1em 10.5em 0.2em;
   text-align: left;
   color: #fff;
   margin-left: -7em;
   font-size: 0.945em;
-  line-height: 1.8em;
+  line-height: 1.9em;
+}
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .md__p {
+    padding: 0;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 .chillhoop__setion .col__md .md__p span {
   color: #FFDFBD;
@@ -79,11 +133,17 @@
   font-weight: 300;
 }
 .chillhoop__setion .col__md .md__p .primary__p {
-  padding: 0.1em 2em 0.2em;
   white-space: pre-line;
+  margin-block-start: 1em;
+  margin-inline-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
-.chillhoop__setion .col__md .md__p .secondary__p {
-  padding: 2em 2em 0.2em;
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .md__p .secondary__p {
+    width: 100%;
+    text-align: center;
+  }
 }
 .chillhoop__setion .col__md .btn__md {
   width: 100%;
@@ -93,8 +153,24 @@
   justify-content: center;
   margin-left: -3em;
 }
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .btn__md {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    padding: 1.8em 3% 0.2em;
+    position: absolute;
+    bottom: 5%;
+  }
+}
+@media (max-width: 350px) {
+  .chillhoop__setion .col__md .btn__md {
+    bottom: 3%;
+  }
+}
 .chillhoop__setion .col__md .btn__md button {
   padding: 1.2em 3.2em;
+  width: 100%;
   background-color: #FFDFBD;
   outline: none;
   border: #FFDFBD;
@@ -103,6 +179,17 @@
 }
 .chillhoop__setion .col__md .btn__md button:hover {
   background-color: #e6cbaf;
+}
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__md .btn__md button {
+    width: 100%;
+    padding: 1.2em 1em;
+  }
+}
+@media (max-width: 890px) {
+  .chillhoop__setion .col__md .btn__md button {
+    width: 100%;
+  }
 }
 .chillhoop__setion .col__md a {
   color: #360202;
@@ -119,6 +206,16 @@
   right: auto;
   z-index: 1;
 }
+@media (max-width: 1200px) {
+  .chillhoop__setion .col__wrap {
+    bottom: 0;
+    float: none;
+    height: 55%;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+  }
+}
 .chillhoop__setion .top__list {
   position: absolute;
   width: 28%;
@@ -127,15 +224,16 @@
   right: 8%;
   z-index: 5;
   background-color: #FFDFBD;
+  box-shadow: 30px -30px 0px rgba(255, 223, 189, 0.1);
 }
-.chillhoop__setion .top__list::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: -6%;
-  right: -9%;
-  position: absolute;
-  background-color: #ffdfbd1f;
+@media (max-width: 1200px) {
+  .chillhoop__setion .top__list {
+    right: 2%;
+    left: 5%;
+    width: 90%;
+    bottom: 5%;
+    top: 4%;
+  }
 }
 .chillhoop__setion .top__inner__list {
   width: 83%;
@@ -167,5 +265,13 @@
   cursor: pointer;
 }
 .chillhoop__setion .top__artist .fa-play-circle:hover {
+  color: #472727;
+}
+.chillhoop__setion .top__artist .fa-pause-circle {
+  color: #360202;
+  font-size: 2.4em;
+  cursor: pointer;
+}
+.chillhoop__setion .top__artist .fa-pause-circle:hover {
   color: #472727;
 }
