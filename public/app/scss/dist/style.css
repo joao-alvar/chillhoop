@@ -315,6 +315,11 @@ header .fa-wolf-pack-battalion:hover {
     top: 0.1em;
   }
 }
+@media (max-width: 310px) {
+  .player__container .track__imagem {
+    display: none;
+  }
+}
 
 .artista__info {
   left: 5.4em;
@@ -338,6 +343,11 @@ header .fa-wolf-pack-battalion:hover {
 @media (max-width: 430px) {
   .artista__info {
     top: 0.1em;
+  }
+}
+@media (max-width: 365px) {
+  .artista__info {
+    display: none;
   }
 }
 
@@ -403,6 +413,16 @@ header .fa-wolf-pack-battalion:hover {
     position: absolute;
     right: -20%;
     top: 20%;
+  }
+}
+@media (max-width: 365px) {
+  .controles {
+    left: 10%;
+  }
+}
+@media (max-width: 310px) {
+  .controles {
+    left: -34%;
   }
 }
 .controles button {
@@ -1505,7 +1525,6 @@ footer nav .social__links .fab:hover {
 
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 320px;
   direction: ltr;
   text-align: left;
   min-height: 100%;
@@ -1514,7 +1533,13 @@ body {
 }
 
 body, html {
+  min-height: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   line-height: 1.30769231;
   scroll-behavior: smooth;
+}
+
+section {
+  min-width: 320px;
 }

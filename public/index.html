@@ -340,11 +340,10 @@
       </div>
     </div>
   </footer>
-
-  <!-- MENSSAGE SECTION COMEÇA -->
-  <section id="mine" class="message__container">
+  
+  <section id="menssage" class="message__container">
     <script>
-      var message = document.getElementById('mine');
+      var message = document.getElementById('menssage');
       message.style.display = 'none';
       
       // Mostra a mensagem após 4 segundos
@@ -360,7 +359,7 @@
 
   <!-- PLAYER SECTION COMEÇA -->
   <span class="menu__player"><i class="fas fa-chevron-down player__menu" onclick="toggleMenu();"></i></span>
-  <div id="player" class="player__container">
+  <section id="player" class="player__container">
     <div class="musica-container" id="musica-container">
         <div class="track__imagem">
             <img src="imagens/.jpg" alt="musica-cover" id="album__track" />
@@ -398,7 +397,7 @@
       <input id="volumeslider" type="range" min="0" max="100" value="70" step="1">
         </div>
     </div>
-      </div>
+      </section>
       </div>
     </div>
     <audio class="audio"></audio>

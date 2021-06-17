@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    min-width: 320px;
     direction: ltr;
     text-align: left;
     min-height: 100%;
@@ -17,8 +16,13 @@ body {
 }
 
 body, html {
+    min-height: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     line-height: 1.30769231;
     scroll-behavior: smooth;
   }
 
+  section {
+      min-width: 320px;
+  }
