@@ -11,13 +11,13 @@ body {
     direction: ltr;
     text-align: left;
     min-height: 100%;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
 }
 
 body, html {
     min-height: 100%;
-    max-width: 100%;
     overflow-x: hidden;
     line-height: 1.30769231;
     scroll-behavior: smooth;
